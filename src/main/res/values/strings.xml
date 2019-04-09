@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">AndroKado</string>
     <string name="MY_USER_INTENT">myUser</string>
+    <string name="title_activity_main4">Main4Activity</string>
 </resources>

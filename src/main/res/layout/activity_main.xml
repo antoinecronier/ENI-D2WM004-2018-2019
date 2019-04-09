@@ -75,4 +75,15 @@
         app:layout_constraintWidth_percent="0.5"
         />
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="ImpliciteIntent"
+        app:layout_constraintBottom_toTopOf="@+id/btn_web"
+        app:layout_constraintTop_toBottomOf="@+id/tv_description"
+        tools:layout_editor_absoluteX="31dp" />
+
 </android.support.constraint.ConstraintLayout>
