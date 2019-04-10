@@ -1,8 +1,10 @@
 package fr.acos.androkado.views.fragments;
 
 import android.content.Context;
+import android.graphics.Rect;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -24,9 +26,6 @@ import java.util.List;
  */
 public class UtilisateurFragment extends Fragment {
 
-    // TODO: Customize parameter argument names
-    private static final String ARG_COLUMN_COUNT = "column-count";
-    // TODO: Customize parameters
     private int mColumnCount = 1;
     private OnListFragmentInteractionListener mListener;
 
@@ -35,25 +34,6 @@ public class UtilisateurFragment extends Fragment {
      * fragment (e.g. upon screen orientation changes).
      */
     public UtilisateurFragment() {
-    }
-
-    // TODO: Customize parameter initialization
-    @SuppressWarnings("unused")
-    public static UtilisateurFragment newInstance(int columnCount) {
-        UtilisateurFragment fragment = new UtilisateurFragment();
-        Bundle args = new Bundle();
-        args.putInt(ARG_COLUMN_COUNT, columnCount);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        if (getArguments() != null) {
-            mColumnCount = getArguments().getInt(ARG_COLUMN_COUNT);
-        }
     }
 
     @Override
@@ -70,6 +50,9 @@ public class UtilisateurFragment extends Fragment {
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
+            MyDividerItemDecoration dividerItemDecoration = new MyDividerItemDecoration(recyclerView.getContext(),
+                    DividerItemDecoration.VERTICAL);
+            recyclerView.addItemDecoration(dividerItemDecoration);
             recyclerView.setAdapter(new MyUtilisateurRecyclerViewAdapter(UtilisateurStaticDatas.ITEMS, mListener));
         }
         return view;
@@ -106,5 +89,26 @@ public class UtilisateurFragment extends Fragment {
     public interface OnListFragmentInteractionListener {
         // TODO: Update argument type and name
         void onListFragmentInteraction(Utilisateur item);
+    }
+
+    public class MyDividerItemDecoration extends DividerItemDecoration{
+
+        /**
+         * Creates a divider {@link RecyclerView.ItemDecoration} that can be used with a
+         * {@link LinearLayoutManager}.
+         *
+         * @param context     Current context, it will be used to access resources.
+         * @param orientation Divider orientation. Should be {@link #HORIZONTAL} or {@link #VERTICAL}.
+         */
+        public MyDividerItemDecoration(Context context, int orientation) {
+            super(context, orientation);
+        }
+
+        @Override
+        public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
+            super.getItemOffsets(outRect, view, parent, state);
+            outRect.top = 20;
+            outRect.bottom = 20;
+        }
     }
 }
