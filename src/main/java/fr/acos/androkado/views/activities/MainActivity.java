@@ -1,4 +1,4 @@
-package fr.acos.androkado;
+package fr.acos.androkado.views.activities;
 
 import android.Manifest;
 import android.content.Intent;
@@ -14,6 +14,10 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import fr.acos.androkado.views.fragments.BlankFragment;
+import fr.acos.androkado.views.fragments.BlankFragment2;
+import fr.acos.androkado.R;
 
 /**
  * Use "implements BlankFragment.OnFragmentInteractionListener" for implementation 1 and 2
@@ -55,6 +59,14 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
 
                 Intent impliciteIntent = new Intent(Intent.ACTION_CALL,Uri.parse("tel:" + "0202020202"));
                 MainActivity.this.startActivity(impliciteIntent);
+            }
+        });
+
+        ((Button) this.findViewById(R.id.button2)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent navigate = new Intent(MainActivity.this, Main2Activity.class);
+                MainActivity.this.startActivity(navigate);
             }
         });
     }

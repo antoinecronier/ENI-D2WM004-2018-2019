@@ -1,7 +1,9 @@
-package fr.acos.androkado;
+package fr.acos.androkado.views.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import fr.acos.androkado.R;
 
 public class Main3Activity extends AppCompatActivity {
 
