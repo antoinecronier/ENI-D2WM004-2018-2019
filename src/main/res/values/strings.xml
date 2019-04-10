@@ -7,4 +7,11 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="hello_blank_fragment2">Hello blank fragment 2</string>
     <string name="navigate">navigate</string>
+    <string name="title_activity_main5">Main5Activity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
 </resources>
