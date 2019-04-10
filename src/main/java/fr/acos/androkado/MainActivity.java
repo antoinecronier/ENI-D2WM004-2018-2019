@@ -3,26 +3,38 @@ package fr.acos.androkado;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.support.v4.app.ActivityCompat;
-import android.support.v7.app.AppCompatActivity;
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import fr.acos.androkado.entities.Utilisateur;
-
-public class MainActivity extends AppCompatActivity {
+/**
+ * Use "implements BlankFragment.OnFragmentInteractionListener" for implementation 1 and 2
+ */
+public class MainActivity extends AppCompatActivity implements BlankFragment.OnFragmentInteractionListener, BlankFragment2.OnFragmentInteractionListener {
     public static String TAG = "MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        /* Start Fragment implementation 2 */
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+        BlankFragment fragment = new BlankFragment();
+        fragmentTransaction.add(R.id.fragmentContainer, fragment);
+        fragmentTransaction.commit();
+        /* End Fragment implementation 2 */
+
         Log.d(TAG, "OnCreate");
 
         Button button = this.findViewById(R.id.button);
@@ -41,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
 
-                Intent impliciteIntent = new Intent(Intent.ACTION_CALL);
+                Intent impliciteIntent = new Intent(Intent.ACTION_CALL,Uri.parse("tel:" + "0202020202"));
                 MainActivity.this.startActivity(impliciteIntent);
             }
         });
@@ -84,12 +96,26 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onImageButtonClicked(View view) {
-        for (int i = 0; i < 3; i++) {
-            Toast.makeText(this, "This is a Toast message " + i, Toast.LENGTH_SHORT).show();
-        }
+//        Intent navigation = new Intent(this,MainActivity5.class);
+//        navigation.putExtra(this.getString(R.string.MY_USER_INTENT), new Utilisateur("jean","michel"));
+//        this.startActivity(navigation);
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
-        Intent navigation = new Intent(this,Main2Activity.class);
-        navigation.putExtra(this.getString(R.string.MY_USER_INTENT), new Utilisateur("jean","michel"));
-        this.startActivity(navigation);
+        Fragment f = this.getSupportFragmentManager().findFragmentById(R.id.fragmentContainer);
+        if(f instanceof BlankFragment){
+            BlankFragment2 fragment = new BlankFragment2();
+            fragmentTransaction.add(R.id.fragmentContainer, fragment);
+            fragmentTransaction.detach(f).attach(fragment).commit();
+        }else{
+            BlankFragment fragment = new BlankFragment();
+            fragmentTransaction.add(R.id.fragmentContainer, fragment);
+            fragmentTransaction.detach(f).attach(fragment).commit();
+        }
+    }
+
+    @Override
+    public void onFragmentInteraction() {
+        Toast.makeText(this,"hi from fragment",Toast.LENGTH_SHORT).show();
     }
 }

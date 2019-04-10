@@ -2,4 +2,8 @@
     <string name="app_name">AndroKado</string>
     <string name="MY_USER_INTENT">myUser</string>
     <string name="title_activity_main4">Main4Activity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment2">Hello blank fragment 2</string>
 </resources>
