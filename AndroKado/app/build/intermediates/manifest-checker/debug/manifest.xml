@@ -22,15 +22,15 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="fr.acos.androkado.MainActivity" >
+        <activity android:name="fr.acos.androkado.views.activities.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="fr.acos.androkado.Main2Activity" />
-        <activity android:name="fr.acos.androkado.Main3Activity" >
+        <activity android:name="fr.acos.androkado.views.activities.Main2Activity" />
+        <activity android:name="fr.acos.androkado.views.activities.Main3Activity" >
             <intent-filter>
                 <action android:name="android.intent.action.CALL" />
 
@@ -38,7 +38,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="fr.acos.androkado.Main4Activity"
+            android:name="fr.acos.androkado.views.activities.Main4Activity"
             android:label="@string/title_activity_main4"
             android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
@@ -47,6 +47,10 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="fr.acos.androkado.views.activities.Main5Activity"
+            android:label="@string/title_activity_main5"
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <meta-data
             android:name="android.support.VERSION"

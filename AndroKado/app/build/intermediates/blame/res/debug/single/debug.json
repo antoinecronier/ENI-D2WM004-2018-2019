@@ -44,12 +44,20 @@
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/drawable-v21/abc_edit_text_material.xml"
     },
     {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/layout_design_layout_tab_text.xml.flat",
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ddf8115ebcc64151e42bcd7dfaf2ec80/res/layout/design_layout_tab_text.xml"
+    },
+    {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4_ic_plusone_standard_off_client.png.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/play-services-plus-16.0.0.aar/919bd0435726e306dea83b656f36e308/res/drawable-tvdpi-v4/ic_plusone_standard_off_client.png"
     },
     {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4_ic_plusone_tall_off_client.png.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/play-services-plus-16.0.0.aar/919bd0435726e306dea83b656f36e308/res/drawable-tvdpi-v4/ic_plusone_tall_off_client.png"
+    },
+    {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/layout_design_navigation_item_subheader.xml.flat",
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ddf8115ebcc64151e42bcd7dfaf2ec80/res/layout/design_navigation_item_subheader.xml"
     },
     {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_notification_bg_normal_pressed.9.png.flat",
@@ -78,6 +86,10 @@
     {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable_abc_ic_arrow_drop_right_black_24dp.xml.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/drawable/abc_ic_arrow_drop_right_black_24dp.xml"
+    },
+    {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/layout_design_layout_snackbar_include.xml.flat",
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ddf8115ebcc64151e42bcd7dfaf2ec80/res/layout/design_layout_snackbar_include.xml"
     },
     {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-ldrtl-xxhdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
@@ -164,6 +176,10 @@
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/drawable-hdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_design_ic_visibility_off.png.flat",
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ddf8115ebcc64151e42bcd7dfaf2ec80/res/drawable-hdpi-v4/design_ic_visibility_off.png"
+    },
+    {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_star_black_36dp.png.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/drawable-hdpi-v4/abc_ic_star_black_36dp.png"
     },
@@ -178,6 +194,10 @@
     {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable_common_google_signin_btn_text_light.xml.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/8b55af7dd4c27d9a8d4c96f18b34adc8/res/drawable/common_google_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_design_ic_visibility.xml.flat",
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ddf8115ebcc64151e42bcd7dfaf2ec80/res/drawable-anydpi-v21/design_ic_visibility.xml"
     },
     {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-v24_ic_launcher_foreground.xml.flat",
@@ -216,6 +236,10 @@
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/drawable-xxhdpi-v4/abc_list_pressed_holo_dark.9.png"
     },
     {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/layout_design_navigation_item_header.xml.flat",
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ddf8115ebcc64151e42bcd7dfaf2ec80/res/layout/design_navigation_item_header.xml"
+    },
+    {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/drawable-xxxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png"
     },
@@ -246,6 +270,14 @@
     {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_text_select_handle_left_mtrl_dark.png.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/drawable-mdpi-v4/abc_text_select_handle_left_mtrl_dark.png"
+    },
+    {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/layout_design_bottom_sheet_dialog.xml.flat",
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ddf8115ebcc64151e42bcd7dfaf2ec80/res/layout/design_bottom_sheet_dialog.xml"
+    },
+    {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable_ic_menu_send.xml.flat",
+        "source": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/src/main/res/drawable/ic_menu_send.xml"
     },
     {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
@@ -292,6 +324,10 @@
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/drawable-xxhdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png"
     },
     {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/color-v23_design_tint_password_toggle.xml.flat",
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ddf8115ebcc64151e42bcd7dfaf2ec80/res/color-v23/design_tint_password_toggle.xml"
+    },
+    {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_ic_star_half_black_48dp.png.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/drawable-mdpi-v4/abc_ic_star_half_black_48dp.png"
     },
@@ -302,6 +338,10 @@
     {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_ic_star_black_36dp.png.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/drawable-mdpi-v4/abc_ic_star_black_36dp.png"
+    },
+    {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/anim-v21_design_bottom_sheet_slide_in.xml.flat",
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ddf8115ebcc64151e42bcd7dfaf2ec80/res/anim-v21/design_bottom_sheet_slide_in.xml"
     },
     {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable_common_google_signin_btn_text_dark_focused.xml.flat",
@@ -328,8 +368,16 @@
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/drawable-xxhdpi-v4/abc_textfield_default_mtrl_alpha.9.png"
     },
     {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-v21_design_password_eye.xml.flat",
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ddf8115ebcc64151e42bcd7dfaf2ec80/res/drawable-v21/design_password_eye.xml"
+    },
+    {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-ldrtl-xhdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/drawable-ldrtl-xhdpi-v17/abc_spinner_mtrl_am_alpha.9.png"
+    },
+    {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/anim_design_snackbar_out.xml.flat",
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ddf8115ebcc64151e42bcd7dfaf2ec80/res/anim/design_snackbar_out.xml"
     },
     {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/layout_select_dialog_singlechoice_material.xml.flat",
@@ -412,8 +460,16 @@
         "source": "/root/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/4b258fd6bf7f359500ba872a0b61b0c5/res/layout/notification_template_big_media_narrow.xml"
     },
     {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_design_ic_visibility_off.png.flat",
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ddf8115ebcc64151e42bcd7dfaf2ec80/res/drawable-mdpi-v4/design_ic_visibility_off.png"
+    },
+    {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/layout_activity_main4.xml.flat",
         "source": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/src/main/res/layout/activity_main4.xml"
+    },
+    {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/layout_nav_header_main5.xml.flat",
+        "source": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/src/main/res/layout/nav_header_main5.xml"
     },
     {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_ic_plusone_medium_off_client.png.flat",
@@ -482,6 +538,10 @@
     {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/drawable-xhdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png"
+    },
+    {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/layout_design_navigation_item.xml.flat",
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ddf8115ebcc64151e42bcd7dfaf2ec80/res/layout/design_navigation_item.xml"
     },
     {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
@@ -592,12 +652,20 @@
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/drawable-xxxhdpi-v4/abc_ic_star_half_black_48dp.png"
     },
     {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable_side_nav_bar.xml.flat",
+        "source": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/src/main/res/drawable/side_nav_bar.xml"
+    },
+    {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_star_half_black_36dp.png.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/drawable-xxxhdpi-v4/abc_ic_star_half_black_36dp.png"
     },
     {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_list_focused_holo.9.png.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/drawable-hdpi-v4/abc_list_focused_holo.9.png"
+    },
+    {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/animator-v21_design_appbar_state_list_animator.xml.flat",
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ddf8115ebcc64151e42bcd7dfaf2ec80/res/animator-v21/design_appbar_state_list_animator.xml"
     },
     {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
@@ -608,12 +676,16 @@
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/drawable-hdpi-v4/abc_list_selector_disabled_holo_dark.9.png"
     },
     {
-        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
-        "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/drawable-xxhdpi-v4/abc_btn_check_to_on_mtrl_000.png"
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_design_ic_visibility.png.flat",
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ddf8115ebcc64151e42bcd7dfaf2ec80/res/drawable-mdpi-v4/design_ic_visibility.png"
     },
     {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable_ic_launcher_background.xml.flat",
         "source": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/src/main/res/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/drawable-xxhdpi-v4/abc_btn_check_to_on_mtrl_000.png"
     },
     {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_list_focused_holo.9.png.flat",
@@ -626,6 +698,10 @@
     {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable_common_google_signin_btn_text_light_normal.xml.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/8b55af7dd4c27d9a8d4c96f18b34adc8/res/drawable/common_google_signin_btn_text_light_normal.xml"
+    },
+    {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/layout_design_menu_item_action_area.xml.flat",
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ddf8115ebcc64151e42bcd7dfaf2ec80/res/layout/design_menu_item_action_area.xml"
     },
     {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
@@ -676,12 +752,20 @@
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/drawable/abc_textfield_search_material.xml"
     },
     {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_design_ic_visibility_off.xml.flat",
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ddf8115ebcc64151e42bcd7dfaf2ec80/res/drawable-anydpi-v21/design_ic_visibility_off.xml"
+    },
+    {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/layout_notification_template_big_media.xml.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/4b258fd6bf7f359500ba872a0b61b0c5/res/layout/notification_template_big_media.xml"
     },
     {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_notify_panel_notification_icon_bg.png.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/60e03a1243b769cbb6ba43ee53c13ca1/res/drawable-xhdpi-v4/notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/layout_design_layout_tab_icon.xml.flat",
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ddf8115ebcc64151e42bcd7dfaf2ec80/res/layout/design_layout_tab_icon.xml"
     },
     {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_common_google_signin_btn_icon_dark_normal_background.9.png.flat",
@@ -780,6 +864,18 @@
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/drawable-mdpi-v4/abc_list_pressed_holo_light.9.png"
     },
     {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/menu_activity_main5_drawer.xml.flat",
+        "source": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/src/main/res/menu/activity_main5_drawer.xml"
+    },
+    {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable_ic_menu_gallery.xml.flat",
+        "source": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/src/main/res/drawable/ic_menu_gallery.xml"
+    },
+    {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_design_ic_visibility_off.png.flat",
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ddf8115ebcc64151e42bcd7dfaf2ec80/res/drawable-xxxhdpi-v4/design_ic_visibility_off.png"
+    },
+    {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-v21_abc_btn_colored_material.xml.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/drawable-v21/abc_btn_colored_material.xml"
     },
@@ -848,6 +944,10 @@
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/drawable-xxhdpi-v4/abc_ic_star_black_36dp.png"
     },
     {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_design_ic_visibility_off.png.flat",
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ddf8115ebcc64151e42bcd7dfaf2ec80/res/drawable-xhdpi-v4/design_ic_visibility_off.png"
+    },
+    {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
     },
@@ -856,8 +956,16 @@
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/drawable-xhdpi-v4/abc_textfield_activated_mtrl_alpha.9.png"
     },
     {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/layout_design_bottom_navigation_item.xml.flat",
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ddf8115ebcc64151e42bcd7dfaf2ec80/res/layout/design_bottom_navigation_item.xml"
+    },
+    {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_star_half_black_16dp.png.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/drawable-xhdpi-v4/abc_ic_star_half_black_16dp.png"
+    },
+    {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable_design_fab_background.xml.flat",
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ddf8115ebcc64151e42bcd7dfaf2ec80/res/drawable/design_fab_background.xml"
     },
     {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ab_share_pack_mtrl_alpha.9.png.flat",
@@ -872,12 +980,20 @@
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/drawable-xhdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png"
     },
     {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-v21_avd_show_password.xml.flat",
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ddf8115ebcc64151e42bcd7dfaf2ec80/res/drawable-v21/avd_show_password.xml"
+    },
+    {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/layout-v26_abc_screen_toolbar.xml.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/layout-v26/abc_screen_toolbar.xml"
     },
     {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_popup_background_mtrl_mult.9.png.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/drawable-hdpi-v4/abc_popup_background_mtrl_mult.9.png"
+    },
+    {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/menu_main5.xml.flat",
+        "source": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/src/main/res/menu/main5.xml"
     },
     {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
@@ -900,6 +1016,10 @@
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/drawable-xxxhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-v21_avd_hide_password.xml.flat",
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ddf8115ebcc64151e42bcd7dfaf2ec80/res/drawable-v21/avd_hide_password.xml"
+    },
+    {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_list_selector_disabled_holo_dark.9.png.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/drawable-mdpi-v4/abc_list_selector_disabled_holo_dark.9.png"
     },
@@ -910,6 +1030,10 @@
     {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/anim_abc_popup_enter.xml.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/anim/abc_popup_enter.xml"
+    },
+    {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_design_ic_visibility.png.flat",
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ddf8115ebcc64151e42bcd7dfaf2ec80/res/drawable-xhdpi-v4/design_ic_visibility.png"
     },
     {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_common_google_signin_btn_icon_light_normal_background.9.png.flat",
@@ -1004,6 +1128,10 @@
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/drawable-hdpi-v4/abc_list_pressed_holo_dark.9.png"
     },
     {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable_navigation_empty_icon.xml.flat",
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ddf8115ebcc64151e42bcd7dfaf2ec80/res/drawable/navigation_empty_icon.xml"
+    },
+    {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/color-v23_abc_btn_colored_text_material.xml.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/color-v23/abc_btn_colored_text_material.xml"
     },
@@ -1018,6 +1146,10 @@
     {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable_abc_ratingbar_material.xml.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/drawable/abc_ratingbar_material.xml"
+    },
+    {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/layout_design_text_input_password_icon.xml.flat",
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ddf8115ebcc64151e42bcd7dfaf2ec80/res/layout/design_text_input_password_icon.xml"
     },
     {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable_abc_seekbar_thumb_material.xml.flat",
@@ -1040,6 +1172,10 @@
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/drawable-xxhdpi-v4/abc_btn_radio_to_on_mtrl_000.png"
     },
     {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/layout_design_navigation_item_separator.xml.flat",
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ddf8115ebcc64151e42bcd7dfaf2ec80/res/layout/design_navigation_item_separator.xml"
+    },
+    {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_list_selector_disabled_holo_light.9.png.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/drawable-mdpi-v4/abc_list_selector_disabled_holo_light.9.png"
     },
@@ -1050,6 +1186,10 @@
     {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ab_share_pack_mtrl_alpha.9.png.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/drawable-xxhdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable_ic_menu_camera.xml.flat",
+        "source": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/src/main/res/drawable/ic_menu_camera.xml"
     },
     {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_list_longpressed_holo.9.png.flat",
@@ -1068,8 +1208,16 @@
         "source": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
     },
     {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/layout_fragment_utilisateur.xml.flat",
+        "source": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/src/main/res/layout/fragment_utilisateur.xml"
+    },
+    {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/anim_abc_slide_out_top.xml.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/anim/abc_slide_out_top.xml"
+    },
+    {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/layout_activity_main5.xml.flat",
+        "source": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/src/main/res/layout/activity_main5.xml"
     },
     {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat",
@@ -1128,6 +1276,10 @@
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/drawable-hdpi-v4/abc_ic_star_half_black_16dp.png"
     },
     {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/layout_design_navigation_menu_item.xml.flat",
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ddf8115ebcc64151e42bcd7dfaf2ec80/res/layout/design_navigation_menu_item.xml"
+    },
+    {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_ic_plusone_standard_off_client.png.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/play-services-plus-16.0.0.aar/919bd0435726e306dea83b656f36e308/res/drawable-xxhdpi-v4/ic_plusone_standard_off_client.png"
     },
@@ -1158,6 +1310,10 @@
     {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_low_pressed.9.png.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/60e03a1243b769cbb6ba43ee53c13ca1/res/drawable-mdpi-v4/notification_bg_low_pressed.9.png"
+    },
+    {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable_ic_menu_manage.xml.flat",
+        "source": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/src/main/res/drawable/ic_menu_manage.xml"
     },
     {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable_common_google_signin_btn_icon_dark.xml.flat",
@@ -1200,6 +1356,10 @@
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/drawable-hdpi-v4/abc_spinner_mtrl_am_alpha.9.png"
     },
     {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/layout_content_main5.xml.flat",
+        "source": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/src/main/res/layout/content_main5.xml"
+    },
+    {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_notification_bg_low_pressed.9.png.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/60e03a1243b769cbb6ba43ee53c13ca1/res/drawable-xhdpi-v4/notification_bg_low_pressed.9.png"
     },
@@ -1222,6 +1382,18 @@
     {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_notification_bg_normal.9.png.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/60e03a1243b769cbb6ba43ee53c13ca1/res/drawable-xhdpi-v4/notification_bg_normal.9.png"
+    },
+    {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable_design_snackbar_background.xml.flat",
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ddf8115ebcc64151e42bcd7dfaf2ec80/res/drawable/design_snackbar_background.xml"
+    },
+    {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/layout_app_bar_main5.xml.flat",
+        "source": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/src/main/res/layout/app_bar_main5.xml"
+    },
+    {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable_ic_menu_slideshow.xml.flat",
+        "source": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/src/main/res/drawable/ic_menu_slideshow.xml"
     },
     {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_text_select_handle_left_mtrl_light.png.flat",
@@ -1288,12 +1460,20 @@
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/color-v23/abc_tint_default.xml"
     },
     {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/layout-sw600dp-v13_design_layout_snackbar.xml.flat",
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ddf8115ebcc64151e42bcd7dfaf2ec80/res/layout-sw600dp-v13/design_layout_snackbar.xml"
+    },
+    {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/drawable-hdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png"
     },
     {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_ic_plusone_small_off_client.png.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/play-services-plus-16.0.0.aar/919bd0435726e306dea83b656f36e308/res/drawable-hdpi-v4/ic_plusone_small_off_client.png"
+    },
+    {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/color_design_error.xml.flat",
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ddf8115ebcc64151e42bcd7dfaf2ec80/res/color/design_error.xml"
     },
     {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-ldrtl-xxxhdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
@@ -1392,6 +1572,10 @@
         "source": "/root/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/8b55af7dd4c27d9a8d4c96f18b34adc8/res/drawable-mdpi-v4/googleg_disabled_color_18.png"
     },
     {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_design_ic_visibility_off.png.flat",
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ddf8115ebcc64151e42bcd7dfaf2ec80/res/drawable-xxhdpi-v4/design_ic_visibility_off.png"
+    },
+    {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_text_select_handle_right_mtrl_dark.png.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/drawable-mdpi-v4/abc_text_select_handle_right_mtrl_dark.png"
     },
@@ -1406,6 +1590,10 @@
     {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable_abc_item_background_holo_dark.xml.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/drawable/abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_design_ic_visibility.png.flat",
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ddf8115ebcc64151e42bcd7dfaf2ec80/res/drawable-xxxhdpi-v4/design_ic_visibility.png"
     },
     {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_common_google_signin_btn_icon_light_normal_background.9.png.flat",
@@ -1508,6 +1696,10 @@
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/drawable-xxhdpi-v4/abc_spinner_mtrl_am_alpha.9.png"
     },
     {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_design_ic_visibility.png.flat",
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ddf8115ebcc64151e42bcd7dfaf2ec80/res/drawable-hdpi-v4/design_ic_visibility.png"
+    },
+    {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable_common_google_signin_btn_icon_disabled.xml.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/8b55af7dd4c27d9a8d4c96f18b34adc8/res/drawable/common_google_signin_btn_icon_disabled.xml"
     },
@@ -1528,12 +1720,20 @@
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/drawable/abc_tab_indicator_material.xml"
     },
     {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_design_ic_visibility.png.flat",
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ddf8115ebcc64151e42bcd7dfaf2ec80/res/drawable-xxhdpi-v4/design_ic_visibility.png"
+    },
+    {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/drawable-hdpi-v4/abc_ic_menu_share_mtrl_alpha.png"
     },
     {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/drawable-xxhdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png"
+    },
+    {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/anim_design_snackbar_in.xml.flat",
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ddf8115ebcc64151e42bcd7dfaf2ec80/res/anim/design_snackbar_in.xml"
     },
     {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat",
@@ -1566,6 +1766,10 @@
     {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_star_half_black_36dp.png.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/drawable-hdpi-v4/abc_ic_star_half_black_36dp.png"
+    },
+    {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/layout_design_navigation_menu.xml.flat",
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ddf8115ebcc64151e42bcd7dfaf2ec80/res/layout/design_navigation_menu.xml"
     },
     {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/layout_abc_select_dialog_material.xml.flat",
@@ -1628,6 +1832,14 @@
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/drawable-xxhdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png"
     },
     {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/anim-v21_design_bottom_sheet_slide_out.xml.flat",
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ddf8115ebcc64151e42bcd7dfaf2ec80/res/anim-v21/design_bottom_sheet_slide_out.xml"
+    },
+    {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-v21_design_bottom_navigation_item_background.xml.flat",
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ddf8115ebcc64151e42bcd7dfaf2ec80/res/drawable-v21/design_bottom_navigation_item_background.xml"
+    },
+    {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_commit_search_api_mtrl_alpha.png.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/drawable-xhdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png"
     },
@@ -1648,16 +1860,20 @@
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/drawable-xxhdpi-v4/abc_text_select_handle_right_mtrl_dark.png"
     },
     {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable_ic_menu_share.xml.flat",
+        "source": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/src/main/res/drawable/ic_menu_share.xml"
+    },
+    {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_text_select_handle_left_mtrl_light.png.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/drawable-hdpi-v4/abc_text_select_handle_left_mtrl_light.png"
     },
     {
-        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
-        "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/drawable-xxxhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png"
-    },
-    {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/anim_abc_slide_out_bottom.xml.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/anim/abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/drawable-xxxhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png"
     },
     {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_scrubber_control_off_mtrl_alpha.png.flat",
@@ -1740,6 +1956,10 @@
         "source": "/root/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/8b55af7dd4c27d9a8d4c96f18b34adc8/res/drawable-xhdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png"
     },
     {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/layout_design_layout_snackbar.xml.flat",
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ddf8115ebcc64151e42bcd7dfaf2ec80/res/layout/design_layout_snackbar.xml"
+    },
+    {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable_abc_text_cursor_material.xml.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d5325e36e48c3ea14d72123e3c9fba25/res/drawable/abc_text_cursor_material.xml"
     },
@@ -1806,5 +2026,9 @@
     {
         "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_notification_bg_normal_pressed.9.png.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/60e03a1243b769cbb6ba43ee53c13ca1/res/drawable-hdpi-v4/notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/res/merged/debug/layout_fragment_utilisateur_list.xml.flat",
+        "source": "/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/src/main/res/layout/fragment_utilisateur_list.xml"
     }
 ]
