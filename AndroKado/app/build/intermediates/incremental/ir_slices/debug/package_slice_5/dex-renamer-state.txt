@@ -1,0 +1,4 @@
+#Thu Apr 11 15:46:43 CEST 2019
+base.0=/home/antoine.cronier/Documents/Cours/Cours ENI/Cours Android/TACTfactory/ENI-D2WM004-2018-2019/AndroKado/app/build/intermediates/transforms/dexMerger/debug/5
+path.0=classes.dex
+renamed.0=classes.dex
