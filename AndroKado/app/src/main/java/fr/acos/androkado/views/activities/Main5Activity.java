@@ -58,7 +58,7 @@ public class Main5Activity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main5, menu);
+        this.getMenuInflater().inflate(R.menu.main5, menu);
         return true;
     }
 

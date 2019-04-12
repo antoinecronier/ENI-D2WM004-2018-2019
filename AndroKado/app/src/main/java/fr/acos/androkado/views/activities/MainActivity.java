@@ -1,6 +1,7 @@
 package fr.acos.androkado.views.activities;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -10,6 +11,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
+import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -57,7 +59,7 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
                     return;
                 }
 
-                Intent impliciteIntent = new Intent(Intent.ACTION_CALL,Uri.parse("tel:" + "0202020202"));
+                Intent impliciteIntent = new Intent(Intent.ACTION_CALL/*,Uri.parse("tel:" + "0202020202")*/);
                 MainActivity.this.startActivity(impliciteIntent);
             }
         });
@@ -118,11 +120,11 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
         if(f instanceof BlankFragment){
             BlankFragment2 fragment = new BlankFragment2();
             fragmentTransaction.add(R.id.fragmentContainer, fragment);
-            fragmentTransaction.detach(f).attach(fragment).commit();
+            fragmentTransaction.detach(f).commit();
         }else{
             BlankFragment fragment = new BlankFragment();
             fragmentTransaction.add(R.id.fragmentContainer, fragment);
-            fragmentTransaction.detach(f).attach(fragment).commit();
+            fragmentTransaction.detach(f).commit();
         }
     }
 
