@@ -3,6 +3,7 @@ package fr.acos.androkado.views.activities;
 import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
@@ -16,6 +17,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import java.util.Map;
 
 import fr.acos.androkado.views.fragments.BlankFragment;
 import fr.acos.androkado.views.fragments.BlankFragment2;
@@ -126,10 +129,21 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
             fragmentTransaction.add(R.id.fragmentContainer, fragment);
             fragmentTransaction.detach(f).commit();
         }
+
+
+        SharedPreferences prefs = this.getPreferences(MODE_PRIVATE);
+        prefs.edit().putBoolean("isToastAllowed", !prefs.getBoolean("isToastAllowed", false)).commit();
     }
 
     @Override
     public void onFragmentInteraction() {
-        Toast.makeText(this,"hi from fragment",Toast.LENGTH_SHORT).show();
+
+        SharedPreferences prefs = this.getPreferences(MODE_PRIVATE);
+        for (Map.Entry<String, ?> data : prefs.getAll().entrySet()) {
+            data.getKey();
+        }
+        if(prefs.getBoolean("isToastAllowed", false)){
+            Toast.makeText(this,"hi from fragment",Toast.LENGTH_SHORT).show();
+        }
     }
 }
