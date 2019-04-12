@@ -5,7 +5,9 @@ import android.os.Parcelable;
 
 import java.io.Serializable;
 
-public class Utilisateur implements Parcelable {
+import fr.acos.androkado.database.base.DbEntity;
+
+public class Utilisateur extends DbEntity implements Parcelable {
     private String nom;
     private String prenom;
 

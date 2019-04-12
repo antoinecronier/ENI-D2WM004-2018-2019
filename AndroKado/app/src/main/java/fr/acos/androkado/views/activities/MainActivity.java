@@ -14,12 +14,16 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
 import java.util.Map;
 
+import fr.acos.androkado.database.daos.BaseDAO;
+import fr.acos.androkado.database.daos.UtilisateurDAO;
+import fr.acos.androkado.entities.Utilisateur;
 import fr.acos.androkado.views.fragments.BlankFragment;
 import fr.acos.androkado.views.fragments.BlankFragment2;
 import fr.acos.androkado.R;
@@ -74,6 +78,8 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
                 MainActivity.this.startActivity(navigate);
             }
         });
+
+        BaseDAO<Utilisateur> daoUtilisateur = new UtilisateurDAO(this);
     }
 
     @Override
