@@ -21,6 +21,8 @@ import android.widget.Toast;
 
 import java.util.Map;
 
+import fr.acos.androkado.database.DbManager;
+import fr.acos.androkado.database.DbOpenHelper;
 import fr.acos.androkado.database.daos.BaseDAO;
 import fr.acos.androkado.database.daos.UtilisateurDAO;
 import fr.acos.androkado.entities.Utilisateur;
@@ -79,7 +81,19 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
             }
         });
 
-        BaseDAO<Utilisateur> daoUtilisateur = new UtilisateurDAO(this);
+        /* DAO Test code */
+//        BaseDAO<Utilisateur> daoUtilisateur = new UtilisateurDAO(this);
+//        Utilisateur myUser = new Utilisateur("jean","bob");
+//        Utilisateur retrievedUser = daoUtilisateur.insert(myUser);
+//        retrievedUser.setPrenom("bobeu");
+//        daoUtilisateur.update(retrievedUser);
+//        Utilisateur userSelected = daoUtilisateur.select(retrievedUser.getId());
+//        daoUtilisateur.delete(userSelected.getId());
+//        Utilisateur userSelected2 = daoUtilisateur.select(retrievedUser.getId());
+
+        /* Updated method */
+//        DbManager manager = new DbManager(this);
+//        manager.getUserDAO()
     }
 
     @Override

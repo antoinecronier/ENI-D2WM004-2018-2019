@@ -13,7 +13,7 @@ public class DbOpenHelper extends SQLiteOpenHelper {
     private static final String DB_NAME = "androkado.db";
 
     public DbOpenHelper(@Nullable Context context) {
-        super(context, this.DB_NAME, null, this.DB_VERSION);
+        super(context, DB_NAME, null, DB_VERSION);
     }
 
     @Override
