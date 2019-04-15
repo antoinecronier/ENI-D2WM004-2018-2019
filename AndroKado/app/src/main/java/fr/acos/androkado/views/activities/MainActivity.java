@@ -94,6 +94,8 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
         /* Updated method */
         DbManager manager = new DbManager();
 
+        manager.getUserDAO().insert(new Utilisateur("test","test"));
+
         for (Utilisateur user: manager.getUserDAO().select()) {
             Log.d(TAG,user.toString());
         }

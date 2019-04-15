@@ -15,12 +15,10 @@ import fr.acos.androkado.entities.Utilisateur;
 
 public class UtilisateurDAO implements BaseDAO<Utilisateur> {
 
-    private DbOpenHelper dbOpenHelper = null;
     private SQLiteDatabase db = null;
 
     public UtilisateurDAO(){
-        dbOpenHelper = new DbOpenHelper(AndrokadoApplication.getAppContext());
-        db = dbOpenHelper.getWritableDatabase();
+        db = DbOpenHelper.getInstance().getDb();
     }
 
     @Override
