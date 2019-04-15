@@ -92,8 +92,11 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
 //        Utilisateur userSelected2 = daoUtilisateur.select(retrievedUser.getId());
 
         /* Updated method */
-//        DbManager manager = new DbManager(this);
-//        manager.getUserDAO()
+        DbManager manager = new DbManager();
+
+        for (Utilisateur user: manager.getUserDAO().select()) {
+            Log.d(TAG,user.toString());
+        }
     }
 
     @Override

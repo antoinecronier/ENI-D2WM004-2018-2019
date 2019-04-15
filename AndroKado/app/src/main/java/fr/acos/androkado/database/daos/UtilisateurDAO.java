@@ -5,6 +5,10 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import fr.acos.androkado.AndrokadoApplication;
 import fr.acos.androkado.database.DbOpenHelper;
 import fr.acos.androkado.database.contracts.UtilisateurContract;
 import fr.acos.androkado.entities.Utilisateur;
@@ -14,8 +18,8 @@ public class UtilisateurDAO implements BaseDAO<Utilisateur> {
     private DbOpenHelper dbOpenHelper = null;
     private SQLiteDatabase db = null;
 
-    public UtilisateurDAO(Context context){
-        dbOpenHelper = new DbOpenHelper(context);
+    public UtilisateurDAO(){
+        dbOpenHelper = new DbOpenHelper(AndrokadoApplication.getAppContext());
         db = dbOpenHelper.getWritableDatabase();
     }
 
@@ -37,6 +41,29 @@ public class UtilisateurDAO implements BaseDAO<Utilisateur> {
             result.setId(id);
             result.setNom(cursor.getString(cursor.getColumnIndex(UtilisateurContract.COL_NOM)));
             result.setPrenom(cursor.getString(2));
+        }
+        return result;
+    }
+
+    @Override
+    public List<Utilisateur> select() {
+        List<Utilisateur> result = new ArrayList<Utilisateur>();
+
+        final Cursor cursor = db.query(
+                UtilisateurContract.TABLE_NAME,
+                UtilisateurContract.ALL_SELECT,
+                null,
+                null,
+                null,
+                null,
+                null
+        );
+        while(cursor.moveToNext()){
+            result.add(new Utilisateur(){{
+                setId(cursor.getLong(cursor.getColumnIndex(UtilisateurContract.COL_ID)));
+                setNom(cursor.getString(cursor.getColumnIndex(UtilisateurContract.COL_NOM)));
+                setPrenom(cursor.getString(cursor.getColumnIndex(UtilisateurContract.COL_PRENOM)));
+            }});
         }
         return result;
     }

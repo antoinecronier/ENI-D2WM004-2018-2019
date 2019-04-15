@@ -7,18 +7,16 @@ import fr.acos.androkado.database.daos.UtilisateurDAO;
 import fr.acos.androkado.entities.Utilisateur;
 
 public class DbManager {
-    private Context context;
 
     private BaseDAO<Utilisateur> userDAO;
 
     public BaseDAO<Utilisateur> getUserDAO() {
         if (userDAO == null){
-            userDAO = new UtilisateurDAO(this.context);
+            userDAO = new UtilisateurDAO();
         }
         return userDAO;
     }
 
-    public DbManager(Context context){
-        this.context = context;
+    public DbManager(){
     }
 }
