@@ -1,104 +1,145 @@
 package fr.acos.androkado.views.activities;
 
+import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
-import android.support.design.widget.NavigationView;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.Toast;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ProgressBar;
 
 import fr.acos.androkado.R;
 
-public class Main5Activity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+public class Main5Activity extends AppCompatActivity{
+
+    private ProgressBar progressBar = null;
+    private Button btn1 = null;
+    private Button btn2 = null;
+    private Button btn3 = null;
+    private Button btn4 = null;
+    private ProgressBarHandler handler = new ProgressBarHandler();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main5);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        /* ProgressBar */
+        this.progressBar = this.findViewById(R.id.progressBar);
+        this.btn1 = this.findViewById(R.id.btnProgressBar1);
+        this.btn2 = this.findViewById(R.id.btnProgressBar2);
+        this.btn3 = this.findViewById(R.id.btnProgressBar3);
+        this.btn4 = this.findViewById(R.id.btnProgressBar4);
+
+    }
+
+    public void onBtnProgressBar1clicked(View view) {
+        new Thread(new Runnable() {
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+            public void run() {
+                progressBarLooper();
             }
-        });
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.addDrawerListener(toggle);
-        toggle.syncState();
-
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
+        }).start();
     }
 
-    @Override
-    public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
+    public void onBtnProgressBar2clicked(View view) {
+        progressBarLooper();
+    }
+
+    private void progressBarLooper() {
+        for (int i = 0; i <= 10000; i++) {
+            Main5Activity.this.progressBar.setProgress(i);
+            try {
+                Thread.sleep(1);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        Main5Activity.this.progressBar.setProgress(0);
+    }
+
+    public void onBtnProgressBar3clicked(View view) {
+        new Worker().execute();
+    }
+
+    public void onBtnProgressBar4clicked(final View view) {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                Message msgGo = new Message();
+                msgGo.what = 1;
+                handler.sendMessage(msgGo);
+                
+                for (int i = 0; i <= 10000; i++) {
+                    Message msgEnCours = new Message();
+                    msgEnCours.what = 2;
+                    msgEnCours.arg1 = i;
+                    handler.sendMessage(msgEnCours);
+
+                    try {
+                        Thread.sleep(1);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+
+                Message msgEnd = new Message();
+                msgEnd.what = 3;
+                handler.sendMessage(msgEnd);
+                Main5Activity.this.progressBar.setProgress(0);
+            }
+        }).start();
+    }
+
+    class Worker extends AsyncTask<Void,Integer,String> {
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+        }
+
+        @Override
+        protected String doInBackground(Void... voids) {
+            progressBarLooper();
+
+            return "J'ai fini";
+        }
+
+        @Override
+        protected void onProgressUpdate(Integer... values) {
+            super.onProgressUpdate(values);
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            super.onPostExecute(s);
         }
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        this.getMenuInflater().inflate(R.menu.main5, menu);
-        return true;
-    }
+    class ProgressBarHandler extends Handler {
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+            switch (msg.what){
+                case 1: btn4.setEnabled(false);
+                    break;
+                case 2: Main5Activity.this.progressBar.setProgress(msg.arg1);
+                    break;
+                case 3: btn4.setEnabled(true);
+                    break;
+            }
         }
-
-        return super.onOptionsItemSelected(item);
-    }
-
-    @SuppressWarnings("StatementWithEmptyBody")
-    @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-        int id = item.getItemId();
-
-        if (id == R.id.nav_camera) {
-            Toast.makeText(this, "Camera", Toast.LENGTH_SHORT).show();
-        } else if (id == R.id.nav_gallery) {
-            Toast.makeText(this, "Gallery", Toast.LENGTH_SHORT).show();
-        } else if (id == R.id.nav_slideshow) {
-            Toast.makeText(this, "Slideshow", Toast.LENGTH_SHORT).show();
-        } else if (id == R.id.nav_manage) {
-            Toast.makeText(this, "Manage", Toast.LENGTH_SHORT).show();
-        } else if (id == R.id.nav_share) {
-            Toast.makeText(this, "Share", Toast.LENGTH_SHORT).show();
-        } else if (id == R.id.nav_send) {
-            Toast.makeText(this, "Send", Toast.LENGTH_SHORT).show();
-        }
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
-        return true;
     }
 }

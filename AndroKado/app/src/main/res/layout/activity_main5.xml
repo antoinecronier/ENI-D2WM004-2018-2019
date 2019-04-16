@@ -1,25 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:openDrawer="start">
+    android:layout_height="match_parent">
 
-    <include
-        layout="@layout/app_bar_main5"
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:max="10000"
+        android:progress="0"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="30dp" />
 
-    <android.support.design.widget.NavigationView
-        android:id="@+id/nav_view"
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btnProgressBar1"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:fitsSystemWindows="true"
-        app:headerLayout="@layout/nav_header_main5"
-        app:menu="@menu/activity_main5_drawer" />
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:paddingTop="10dp"
+        android:text="type1"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar"
+        app:layout_constraintEnd_toStartOf="@+id/btnProgressBar2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="onBtnProgressBar1clicked" />
 
-</android.support.v4.widget.DrawerLayout>
+    <Button
+        android:id="@+id/btnProgressBar2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="onBtnProgressBar2clicked"
+        android:text="type2"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="143dp" />
+
+    <Button
+        android:id="@+id/btnProgressBar3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="onBtnProgressBar3clicked"
+        android:text="type3"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar"
+        app:layout_constraintEnd_toStartOf="@+id/btnProgressBar4"
+        app:layout_constraintStart_toEndOf="@+id/btnProgressBar2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnProgressBar4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="type4"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="onBtnProgressBar4clicked" />
+
+</android.support.constraint.ConstraintLayout>
