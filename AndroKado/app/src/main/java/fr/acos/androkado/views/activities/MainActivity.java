@@ -1,20 +1,16 @@
 package fr.acos.androkado.views.activities;
 
 import android.Manifest;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
-import android.util.AttributeSet;
 import android.util.Log;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -22,13 +18,11 @@ import android.widget.Toast;
 import java.util.Map;
 
 import fr.acos.androkado.database.DbManager;
-import fr.acos.androkado.database.DbOpenHelper;
-import fr.acos.androkado.database.daos.BaseDAO;
-import fr.acos.androkado.database.daos.UtilisateurDAO;
 import fr.acos.androkado.entities.Utilisateur;
 import fr.acos.androkado.views.fragments.BlankFragment;
 import fr.acos.androkado.views.fragments.BlankFragment2;
 import fr.acos.androkado.R;
+import fr.acos.androkado.views.fragments.UtilisateurFragment;
 
 /**
  * Use "implements BlankFragment.OnFragmentInteractionListener" for implementation 1 and 2
@@ -94,7 +88,10 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
         /* Updated method */
         DbManager manager = new DbManager();
 
-        manager.getUserDAO().insert(new Utilisateur("test","test"));
+//        for (int i = 0; i < 10000; i++) {
+//            manager.getUserDAO().insert(new Utilisateur("test"+i,"test"+i));
+//        }
+
 
         for (Utilisateur user: manager.getUserDAO().select()) {
             Log.d(TAG,user.toString());

@@ -75,7 +75,7 @@ public class Main5Activity extends AppCompatActivity{
                 Message msgGo = new Message();
                 msgGo.what = 1;
                 handler.sendMessage(msgGo);
-                
+
                 for (int i = 0; i <= 10000; i++) {
                     Message msgEnCours = new Message();
                     msgEnCours.what = 2;

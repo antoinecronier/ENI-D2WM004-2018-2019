@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import fr.acos.androkado.R;
 import fr.acos.androkado.entities.Utilisateur;
+import fr.acos.androkado.utils.UpdatableAdapter;
 import fr.acos.androkado.views.fragments.UtilisateurFragment.OnListFragmentInteractionListener;
 
 import java.util.List;
@@ -17,7 +18,7 @@ import java.util.List;
  * specified {@link OnListFragmentInteractionListener}.
  * TODO: Replace the implementation with code for your data type.
  */
-public class MyUtilisateurRecyclerViewAdapter extends RecyclerView.Adapter<MyUtilisateurRecyclerViewAdapter.ViewHolder> {
+public class MyUtilisateurRecyclerViewAdapter extends RecyclerView.Adapter<MyUtilisateurRecyclerViewAdapter.ViewHolder> implements UpdatableAdapter<Utilisateur> {
 
     private final List<Utilisateur> mValues;
     private final OnListFragmentInteractionListener mListener;
@@ -74,5 +75,12 @@ public class MyUtilisateurRecyclerViewAdapter extends RecyclerView.Adapter<MyUti
         public String toString() {
             return super.toString() + " '" + mContentView.getText() + "'";
         }
+    }
+
+    @Override
+    public void updateList(List<Utilisateur> datas){
+        mValues.clear();
+        mValues.addAll(datas);
+        this.notifyDataSetChanged();
     }
 }

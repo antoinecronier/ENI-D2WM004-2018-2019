@@ -2,6 +2,7 @@ package fr.acos.androkado.views.fragments;
 
 import android.content.Context;
 import android.graphics.Rect;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DividerItemDecoration;
@@ -11,11 +12,15 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 
 import fr.acos.androkado.R;
+import fr.acos.androkado.database.DbManager;
 import fr.acos.androkado.entities.Utilisateur;
+import fr.acos.androkado.utils.ProgressableActivity;
 import fr.acos.androkado.utils.UtilisateurStaticDatas;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -28,6 +33,9 @@ public class UtilisateurFragment extends Fragment {
 
     private int mColumnCount = 1;
     private OnListFragmentInteractionListener mListener;
+    private ProgressableActivity progressBarActivity = null;
+    private RecyclerView recyclerView = null;
+    private MyUtilisateurRecyclerViewAdapter adapter;
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
@@ -44,7 +52,7 @@ public class UtilisateurFragment extends Fragment {
         // Set the adapter
         if (view instanceof RecyclerView) {
             Context context = view.getContext();
-            RecyclerView recyclerView = (RecyclerView) view;
+            recyclerView = (RecyclerView) view;
             if (mColumnCount <= 1) {
                 recyclerView.setLayoutManager(new LinearLayoutManager(context));
             } else {
@@ -53,7 +61,11 @@ public class UtilisateurFragment extends Fragment {
             MyDividerItemDecoration dividerItemDecoration = new MyDividerItemDecoration(recyclerView.getContext(),
                     DividerItemDecoration.VERTICAL);
             recyclerView.addItemDecoration(dividerItemDecoration);
-            recyclerView.setAdapter(new MyUtilisateurRecyclerViewAdapter(UtilisateurStaticDatas.ITEMS, mListener));
+
+            adapter = new MyUtilisateurRecyclerViewAdapter(new ArrayList<Utilisateur>(), mListener);
+            recyclerView.setAdapter(adapter);
+
+            new UpdateRecycler().execute();
         }
         return view;
     }
@@ -67,6 +79,10 @@ public class UtilisateurFragment extends Fragment {
         } else {
             throw new RuntimeException(context.toString()
                     + " must implement OnListFragmentInteractionListener");
+        }
+
+        if (context instanceof ProgressableActivity){
+            this.progressBarActivity = ((ProgressableActivity) context);
         }
     }
 
@@ -109,6 +125,26 @@ public class UtilisateurFragment extends Fragment {
             super.getItemOffsets(outRect, view, parent, state);
             outRect.top = 20;
             outRect.bottom = 20;
+        }
+    }
+
+    public class UpdateRecycler extends AsyncTask<Void,Void,List<Utilisateur>>{
+
+        @Override
+        protected List<Utilisateur> doInBackground(Void... voids) {
+            DbManager dbManager = new DbManager();
+
+            List<Utilisateur> users = dbManager.getUserDAO()
+                    .select(UtilisateurFragment.this.progressBarActivity);
+
+            return users;
+        }
+
+        @Override
+        protected void onPostExecute(List<Utilisateur> utilisateurs) {
+            super.onPostExecute(utilisateurs);
+
+            UtilisateurFragment.this.adapter.updateList(utilisateurs);
         }
     }
 }

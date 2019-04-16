@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -21,18 +22,23 @@ import java.util.ArrayList;
 import fr.acos.androkado.R;
 import fr.acos.androkado.entities.Contact;
 import fr.acos.androkado.entities.Utilisateur;
+import fr.acos.androkado.utils.ProgressableActivity;
 import fr.acos.androkado.views.fragments.BlankFragment;
 import fr.acos.androkado.views.fragments.MyUtilisateurRecyclerViewAdapter;
 import fr.acos.androkado.views.fragments.UtilisateurFragment;
 
-public class Main2Activity extends AppCompatActivity implements UtilisateurFragment.OnListFragmentInteractionListener {
+public class Main2Activity extends AppCompatActivity implements UtilisateurFragment.OnListFragmentInteractionListener, ProgressableActivity {
 
     private static final String TAG = "Main2Activity";
+    private ProgressBar progressBar = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+
+        /* Get progress bar */
+        progressBar = this.findViewById(R.id.progressBarActivityMain2);
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -80,5 +86,10 @@ public class Main2Activity extends AppCompatActivity implements UtilisateurFragm
     @Override
     public void onListFragmentInteraction(Utilisateur item) {
         Toast.makeText(this, item.toString(), Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public ProgressBar getProgressBar() {
+        return this.progressBar;
     }
 }
