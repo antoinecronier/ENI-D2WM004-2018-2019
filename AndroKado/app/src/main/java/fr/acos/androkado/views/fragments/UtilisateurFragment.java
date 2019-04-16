@@ -130,6 +130,7 @@ public class UtilisateurFragment extends Fragment {
 
     public class UpdateRecycler extends AsyncTask<Void,Void,List<Utilisateur>>{
 
+
         @Override
         protected List<Utilisateur> doInBackground(Void... voids) {
             DbManager dbManager = new DbManager();

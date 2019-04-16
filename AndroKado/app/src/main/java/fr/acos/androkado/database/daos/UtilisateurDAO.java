@@ -131,7 +131,8 @@ public class UtilisateurDAO implements BaseDAO<Utilisateur> {
                 setNom(cursor.getString(cursor.getColumnIndex(UtilisateurContract.COL_NOM)));
                 setPrenom(cursor.getString(cursor.getColumnIndex(UtilisateurContract.COL_PRENOM)));
             }});
-            progressableActivity.getProgressBar().setProgress(progressableActivity.getProgressBar().getProgress()+1);
+            progressableActivity.getProgressBar().setProgress(
+                    progressableActivity.getProgressBar().getProgress()+1);
         }
 
         progressableActivity.getProgressBar().setVisibility(View.INVISIBLE);
