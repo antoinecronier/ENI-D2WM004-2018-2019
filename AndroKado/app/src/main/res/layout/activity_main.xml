@@ -106,4 +106,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_description" />
 
+    <Button
+        android:id="@+id/buttonWebService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="WebService"
+        app:layout_constraintBottom_toTopOf="@+id/btn_achete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/button2"
+        android:onClick="onClickBtnWebService"/>
+
 </android.support.constraint.ConstraintLayout>

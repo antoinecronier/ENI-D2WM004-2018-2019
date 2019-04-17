@@ -185,4 +185,9 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
             Toast.makeText(this,"hi from fragment",Toast.LENGTH_SHORT).show();
         }
     }
+
+    public void onClickBtnWebService(View view) {
+        Intent intent = new Intent(this,Main6Activity.class);
+        this.startActivity(intent);
+    }
 }
