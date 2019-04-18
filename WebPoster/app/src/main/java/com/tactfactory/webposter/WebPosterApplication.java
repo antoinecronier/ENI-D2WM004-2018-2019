@@ -7,6 +7,10 @@ import android.os.Bundle;
 
 public class WebPosterApplication extends Application {
 
+    /**
+     * DAO imp 1h30
+     */
+
     private static Context context;
 
     public void onCreate() {
