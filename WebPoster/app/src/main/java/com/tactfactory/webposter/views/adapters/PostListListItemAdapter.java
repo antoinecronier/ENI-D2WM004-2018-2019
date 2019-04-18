@@ -12,12 +12,12 @@ import com.tactfactory.webposter.views.fragments.PostListFragment.OnListFragment
 
 import java.util.List;
 
-public class PostListRecyclerViewAdapter extends RecyclerView.Adapter<PostListRecyclerViewAdapter.ViewHolder> {
+public class PostListListItemAdapter extends RecyclerView.Adapter<PostListListItemAdapter.ViewHolder> implements UpdatableListItem<List<Post>> {
 
     private final List<Post> mValues;
     private final OnListFragmentInteractionListener mListener;
 
-    public PostListRecyclerViewAdapter(List<Post> items, OnListFragmentInteractionListener listener) {
+    public PostListListItemAdapter(List<Post> items, OnListFragmentInteractionListener listener) {
         mValues = items;
         mListener = listener;
     }
@@ -39,8 +39,18 @@ public class PostListRecyclerViewAdapter extends RecyclerView.Adapter<PostListRe
             @Override
             public void onClick(View v) {
                 if (null != mListener) {
-                    mListener.onListFragmentInteraction(holder.mItem);
+                    mListener.onListFragmentClicked(holder.mItem);
                 }
+            }
+        });
+
+        holder.mView.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                if (null != mListener) {
+                    mListener.onListFragmentLongClicked(holder.mItem);
+                }
+                return false;
             }
         });
     }
@@ -48,6 +58,13 @@ public class PostListRecyclerViewAdapter extends RecyclerView.Adapter<PostListRe
     @Override
     public int getItemCount() {
         return mValues.size();
+    }
+
+    @Override
+    public void update(List<Post> items) {
+        mValues.clear();
+        mValues.addAll(items);
+        this.notifyDataSetChanged();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

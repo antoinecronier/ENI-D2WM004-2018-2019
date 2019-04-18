@@ -2,31 +2,44 @@ package com.tactfactory.webposter.entities;
 
 import com.tactfactory.webposter.database.base.DbEntity;
 
-public class Geo extends DbEntity {
-    private Long lat;
-    private Long lng;
+import java.io.Serializable;
 
-    public Long getLat() {
+public class Geo implements DbEntity, Serializable {
+    private Long id;
+    private Double lat;
+    private Double lng;
+
+    @Override
+    public Long getId() {
+        return this.id;
+    }
+
+    @Override
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Double getLat() {
         return lat;
     }
 
-    public void setLat(Long lat) {
+    public void setLat(Double lat) {
         this.lat = lat;
     }
 
-    public Long getLng() {
+    public Double getLng() {
         return lng;
     }
 
-    public void setLng(Long lng) {
+    public void setLng(Double lng) {
         this.lng = lng;
     }
 
     public Geo() {
     }
 
-    public Geo(Long id, Long lat, Long lng) {
-        super(id);
+    public Geo(Long id, Double lat, Double lng) {
+        this.id = id;
         this.lat = lat;
         this.lng = lng;
     }

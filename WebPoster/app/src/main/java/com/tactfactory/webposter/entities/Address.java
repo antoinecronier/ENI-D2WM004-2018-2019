@@ -2,12 +2,25 @@ package com.tactfactory.webposter.entities;
 
 import com.tactfactory.webposter.database.base.DbEntity;
 
-public class Address extends DbEntity {
+import java.io.Serializable;
+
+public class Address implements DbEntity, Serializable {
+    private Long id;
     private String street;
     private String suite;
     private String city;
     private String zipcode;
     private Geo geo;
+
+    @Override
+    public Long getId() {
+        return this.id;
+    }
+
+    @Override
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getStreet() {
         return street;
@@ -53,7 +66,7 @@ public class Address extends DbEntity {
     }
 
     public Address(Long id, String street, String suite, String city, String zipcode, Geo geo) {
-        super(id);
+        this.id = id;
         this.street = street;
         this.suite = suite;
         this.city = city;

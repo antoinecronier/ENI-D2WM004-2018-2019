@@ -13,4 +13,6 @@ public interface BaseDao<T extends DbEntity> {
     boolean delete(Long id);
 
     T save(T item);
+
+    T save(T item, boolean forceInsert);
 }

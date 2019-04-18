@@ -2,10 +2,23 @@ package com.tactfactory.webposter.entities;
 
 import com.tactfactory.webposter.database.base.DbEntity;
 
-public class Company extends DbEntity {
+import java.io.Serializable;
+
+public class Company implements DbEntity, Serializable {
+    private Long id;
     private String name;
     private String catchPhrase;
     private String bs;
+
+    @Override
+    public Long getId() {
+        return this.id;
+    }
+
+    @Override
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -35,7 +48,7 @@ public class Company extends DbEntity {
     }
 
     public Company(Long id, String name, String catchPhrase, String bs) {
-        super(id);
+        this.id = id;
         this.name = name;
         this.catchPhrase = catchPhrase;
         this.bs = bs;

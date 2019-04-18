@@ -12,6 +12,17 @@ import com.tactfactory.webposter.database.dao.contracts.CompanyContract;
 import com.tactfactory.webposter.database.dao.contracts.GeoContract;
 import com.tactfactory.webposter.database.dao.contracts.PostContract;
 import com.tactfactory.webposter.database.dao.contracts.UserContract;
+import com.tactfactory.webposter.entities.Comment;
+import com.tactfactory.webposter.entities.Post;
+import com.tactfactory.webposter.entities.User;
+import com.tactfactory.webposter.webservice.CommentWebService;
+import com.tactfactory.webposter.webservice.CommentWebServiceByPost;
+import com.tactfactory.webposter.webservice.PostWebService;
+import com.tactfactory.webposter.webservice.UserWebService;
+import com.tactfactory.webposter.webservice.UserWebServiceById;
+
+import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 public class DbOpenHelper extends SQLiteOpenHelper {
 
@@ -43,6 +54,28 @@ public class DbOpenHelper extends SQLiteOpenHelper {
         db.execSQL(UserContract.CREATE_TABLE);
 
         this.db = db;
+
+        DbManager manager = new DbManager();
+        try {
+            List<Post> posts = new PostWebService().execute().get();
+            for (Post post : posts) {
+                manager.getPostDao().save(post,true);
+            }
+
+            List<User> users = new UserWebService().execute().get();
+            for (User user : users) {
+                manager.getUserDao().save(user,true);
+            }
+
+            List<Comment> comments = new CommentWebService().execute().get();
+            for (Comment comment : comments) {
+                manager.getCommentDao().save(comment,true);
+            }
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override

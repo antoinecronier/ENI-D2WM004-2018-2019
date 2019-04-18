@@ -27,7 +27,7 @@ public abstract class BaseDaoImp<T extends DbEntity> implements BaseDao<T> {
 
         Cursor cursor = db.query(
                 contractBase.TABLE_NAME,
-                contractBase.ALL_SELECT,
+                contractBase.ALL_SELECT_WITH_LINKS,
                 contractBase.COL_ID + "=?",
                 new String[]{id.toString()},
                 null,
@@ -50,7 +50,7 @@ public abstract class BaseDaoImp<T extends DbEntity> implements BaseDao<T> {
 
         final Cursor cursor = db.query(
                 contractBase.TABLE_NAME,
-                contractBase.ALL_SELECT,
+                contractBase.ALL_SELECT_WITH_LINKS,
                 null,
                 null,
                 null,
@@ -94,6 +94,15 @@ public abstract class BaseDaoImp<T extends DbEntity> implements BaseDao<T> {
         }
 
         return item;
+    }
+
+    @Override
+    public T save(T item, boolean forceInsert) {
+        if(forceInsert){
+            item.setId(null);
+        }
+
+        return save(item);
     }
 
     protected abstract ContentValues contentValuesSetter(T item);

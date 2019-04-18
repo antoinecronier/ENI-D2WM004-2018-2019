@@ -1,12 +1,27 @@
 package com.tactfactory.webposter.entities;
 
 import com.tactfactory.webposter.database.base.DbEntity;
+import com.tactfactory.webposter.views.adapters.UpdatableItem;
+import com.tactfactory.webposter.webservice.WebServicable;
 
-public class Post extends DbEntity {
+import java.io.Serializable;
+
+public class Post implements DbEntity, Serializable, WebServicable, UpdatableItem {
+    private Long id;
     private String title;
     private String body;
     private Long userId;
     private User user;
+
+    @Override
+    public Long getId() {
+        return this.id;
+    }
+
+    @Override
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getTitle() {
         return title;
@@ -25,11 +40,7 @@ public class Post extends DbEntity {
     }
 
     public Long getUserId() {
-        if (this.user != null){
-            return this.user.getId();
-        }else{
-            return null;
-        }
+        return this.userId;
     }
 
     public void setUserId(Long userId) {
@@ -38,6 +49,7 @@ public class Post extends DbEntity {
         }else{
             this.user = new User(userId);
         }
+        this.userId = userId;
     }
 
     public User getUser() {
@@ -52,11 +64,11 @@ public class Post extends DbEntity {
     }
 
     public Post(Long postId) {
-        super(postId);
+        this.id = postId;
     }
 
     public Post(Long id, String title, String body, Long userId, User user) {
-        super(id);
+        this.id = id;
         this.title = title;
         this.body = body;
         this.userId = userId;

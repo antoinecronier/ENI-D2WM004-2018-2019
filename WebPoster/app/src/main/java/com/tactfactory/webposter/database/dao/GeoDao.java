@@ -27,8 +27,8 @@ public class GeoDao extends BaseDaoImp<Geo> {
         Geo company = new Geo();
 
         company.setId(cursor.getLong(cursor.getColumnIndex(GeoContract.COL_ID)));
-        company.setLat(cursor.getLong(cursor.getColumnIndex(GeoContract.COL_LAT)));
-        company.setLng(cursor.getLong(cursor.getColumnIndex(GeoContract.COL_LNG)));
+        company.setLat(cursor.getDouble(cursor.getColumnIndex(GeoContract.COL_LAT)));
+        company.setLng(cursor.getDouble(cursor.getColumnIndex(GeoContract.COL_LNG)));
 
         return company;
     }

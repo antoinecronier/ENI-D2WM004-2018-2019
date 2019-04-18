@@ -8,7 +8,7 @@ public class PostContract extends ContractBase {
     public static final String COL_ID = "id";
     public static final String COL_TITLE = "title";
     public static final String COL_BODY = "body";
-    public static final String COL_USER_ID = "company_id";
+    public static final String COL_USER_ID = "user_id";
 
     public static final String[] ALL_SELECT = new String[]{
             COL_ID,

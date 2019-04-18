@@ -1,8 +1,13 @@
 package com.tactfactory.webposter.entities;
 
 import com.tactfactory.webposter.database.base.DbEntity;
+import com.tactfactory.webposter.views.adapters.UpdatableItem;
+import com.tactfactory.webposter.webservice.WebServicable;
 
-public class User extends DbEntity {
+import java.io.Serializable;
+
+public class User implements DbEntity, Serializable, WebServicable, UpdatableItem {
+    private Long id;
     private String name;
     private String username;
     private String email;
@@ -10,6 +15,16 @@ public class User extends DbEntity {
     private String website;
     private Address address;
     private Company company;
+
+    @Override
+    public Long getId() {
+        return this.id;
+    }
+
+    @Override
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -71,11 +86,11 @@ public class User extends DbEntity {
     }
 
     public User(Long userId) {
-        super(userId);
+        this.id = userId;
     }
 
     public User(Long id, String name, String username, String email, String phone, String website) {
-        super(id);
+        this.id = id;
         this.name = name;
         this.username = username;
         this.email = email;

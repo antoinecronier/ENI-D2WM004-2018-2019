@@ -8,18 +8,15 @@ import android.widget.TextView;
 
 import com.tactfactory.webposter.R;
 import com.tactfactory.webposter.entities.Comment;
-import com.tactfactory.webposter.views.fragments.CommentListFragment.OnListFragmentInteractionListener;
 
 import java.util.List;
 
-public class CommentListRecyclerViewAdapter extends RecyclerView.Adapter<CommentListRecyclerViewAdapter.ViewHolder> {
+public class CommentListListItemAdapter extends RecyclerView.Adapter<CommentListListItemAdapter.ViewHolder> implements UpdatableListItem<List<Comment>> {
 
     private final List<Comment> mValues;
-    private final OnListFragmentInteractionListener mListener;
 
-    public CommentListRecyclerViewAdapter(List<Comment> items, OnListFragmentInteractionListener listener) {
+    public CommentListListItemAdapter(List<Comment> items) {
         mValues = items;
-        mListener = listener;
     }
 
     @Override
@@ -35,22 +32,18 @@ public class CommentListRecyclerViewAdapter extends RecyclerView.Adapter<Comment
         holder.mCommentName.setText(mValues.get(position).getName());
         holder.mCommentBody.setText(mValues.get(position).getBody());
         holder.mCommentEmail.setText(mValues.get(position).getEmail());
-
-        holder.mView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (null != mListener) {
-                    // Notify the active callbacks interface (the activity, if the
-                    // fragment is attached to one) that an item has been selected.
-                    mListener.onListFragmentInteraction(holder.mItem);
-                }
-            }
-        });
     }
 
     @Override
     public int getItemCount() {
         return mValues.size();
+    }
+
+    @Override
+    public void update(List<Comment> items) {
+        mValues.clear();
+        mValues.addAll(items);
+        this.notifyDataSetChanged();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

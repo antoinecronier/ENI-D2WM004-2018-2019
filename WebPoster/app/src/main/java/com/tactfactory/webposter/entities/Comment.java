@@ -1,13 +1,28 @@
 package com.tactfactory.webposter.entities;
 
 import com.tactfactory.webposter.database.base.DbEntity;
+import com.tactfactory.webposter.views.adapters.UpdatableItem;
+import com.tactfactory.webposter.webservice.WebServicable;
 
-public class Comment extends DbEntity {
+import java.io.Serializable;
+
+public class Comment implements DbEntity, Serializable, WebServicable, UpdatableItem {
+    private Long id;
     private String name;
     private String email;
     private String body;
     private Long postId;
     private Post post;
+
+    @Override
+    public Long getId() {
+        return this.id;
+    }
+
+    @Override
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -61,7 +76,7 @@ public class Comment extends DbEntity {
     }
 
     public Comment(Long id, String name, String email, String body, Long postId, Post post) {
-        super(id);
+        this.id = id;
         this.name = name;
         this.email = email;
         this.body = body;

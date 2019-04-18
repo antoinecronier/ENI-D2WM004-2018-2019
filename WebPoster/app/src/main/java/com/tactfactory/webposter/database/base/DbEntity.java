@@ -1,20 +1,11 @@
 package com.tactfactory.webposter.database.base;
 
-public abstract class DbEntity {
-    private Long id;
+import com.tactfactory.webposter.views.adapters.UpdatableItem;
 
-    public Long getId() {
-        return id;
-    }
+import java.io.Serializable;
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+public interface DbEntity {
+    public Long getId();
+    public void setId(Long id);
 
-    public DbEntity() {
-    }
-
-    public DbEntity(Long id) {
-        this.id = id;
-    }
 }
