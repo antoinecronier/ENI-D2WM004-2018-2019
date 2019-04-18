@@ -36,7 +36,7 @@ public abstract class BaseDaoImp<T extends DbEntity> implements BaseDao<T> {
         );
 
         if(cursor.moveToNext()){
-            result = cursorToJava(cursor);
+            result = this.cursorToJava(cursor);
         }
 
         cursor.close();
@@ -59,7 +59,7 @@ public abstract class BaseDaoImp<T extends DbEntity> implements BaseDao<T> {
         );
 
         while(cursor.moveToNext()){
-            result.add(cursorToJava(cursor));
+            result.add(this.cursorToJava(cursor));
         }
 
         cursor.close();
@@ -82,7 +82,16 @@ public abstract class BaseDaoImp<T extends DbEntity> implements BaseDao<T> {
 
     @Override
     public T save(T item) {
-        ContentValues values = new contentValuesSetter(item);
+        ContentValues values = this.contentValuesSetter(item);
+
+        if (item.getId() == null){
+            item.setId(db.insert(contractBase.TABLE_NAME,null,values));
+        }else{
+            String[] whereDatas = new String[1];
+            whereDatas[0] = item.getId().toString();
+            db.update(contractBase.TABLE_NAME,values,
+                    contractBase.COL_ID + "=?",whereDatas);
+        }
 
         return item;
     }
