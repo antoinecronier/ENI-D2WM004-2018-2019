@@ -4,16 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.activities.CommentListActivity">
-
-    <android.support.v7.widget.ContentFrameLayout
-        android:id="@+id/commentListFragmentContainer"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+    tools:context=".views.activities.MainActivity">
 
     <fragment
+        android:id="@+id/fragmentListVoiture"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:name="com.tactfactory.webposter.views.fragments.CommentListFragment"/>
+        android:name="com.tactfactory.vroom.views.fragments.VoitureListFragment"/>
 
 </android.support.constraint.ConstraintLayout>
