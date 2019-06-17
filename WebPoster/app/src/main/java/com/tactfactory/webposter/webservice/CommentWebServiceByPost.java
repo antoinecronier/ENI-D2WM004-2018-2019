@@ -14,10 +14,10 @@ import java.util.List;
 
 public class CommentWebServiceByPost extends BaseWebService<Comment,List<Comment>> {
 
-    private static final String BASE_CONNECTION = "https://jsonplaceholder.typicode.com/posts";
+    private static final String BASE_CONNECTION = "https://jsonplaceholder.typicode.com/comments?postId=";
 
     public CommentWebServiceByPost(Post post) {
-        super(BASE_CONNECTION + "/" + post.getId() + "/comments");
+        super(BASE_CONNECTION + post.getId());
     }
 
     @Override
