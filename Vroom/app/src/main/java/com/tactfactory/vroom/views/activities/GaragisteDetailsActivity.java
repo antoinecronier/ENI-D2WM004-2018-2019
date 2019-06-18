@@ -1,6 +1,7 @@
 package com.tactfactory.vroom.views.activities;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
@@ -9,37 +10,41 @@ import android.os.Bundle;
 import com.tactfactory.vroom.R;
 import com.tactfactory.vroom.entities.Garagiste;
 import com.tactfactory.vroom.entities.Voiture;
+import com.tactfactory.vroom.views.fragments.GaragisteDetailsFragment;
 import com.tactfactory.vroom.views.fragments.VoitureDetailsFragment;
+import com.tactfactory.vroom.views.fragments.VoitureListFragment;
 
-public class VoitureDetailsActivity extends AppCompatActivity implements VoitureDetailsFragment.OnFragmentInteractionListener {
+public class GaragisteDetailsActivity extends AppCompatActivity implements GaragisteDetailsFragment.OnFragmentInteractionListener, VoitureListFragment.OnListFragmentInteractionListener {
 
     public static final String FRAGMENT_ITEM = "fragmentItem";
-    public static final String GARAGISTE = "garagiste";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_voiture_details);
+        setContentView(R.layout.activity_garagistre_details);
 
         Intent navigation = this.getIntent();
-        if (navigation != null && navigation.getSerializableExtra(MainActivity.VOITURE) != null){
-            Voiture voiture = (Voiture) navigation.getSerializableExtra(MainActivity.VOITURE);
+        if (navigation != null && navigation.getSerializableExtra(VoitureDetailsActivity.GARAGISTE) != null){
+            Garagiste garagiste = (Garagiste) navigation.getSerializableExtra(VoitureDetailsActivity.GARAGISTE);
             FragmentManager fragmentManager = getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
-            VoitureDetailsFragment fragment = new VoitureDetailsFragment();
+            GaragisteDetailsFragment fragment = new GaragisteDetailsFragment();
             Bundle bundle = new Bundle();
-            bundle.putSerializable(FRAGMENT_ITEM,voiture);
+            bundle.putSerializable(FRAGMENT_ITEM,garagiste);
             fragment.setArguments(bundle);
-            fragmentTransaction.add(R.id.fragmentDetailsContainer, fragment);
+            fragmentTransaction.add(R.id.fragmentDetailsGaragisteContainer, fragment);
             fragmentTransaction.commit();
         }
     }
 
     @Override
-    public void onFragmentInteraction(Garagiste garagiste) {
-        Intent navigation = new Intent(this,GaragisteDetailsActivity.class);
-        navigation.putExtra(GARAGISTE,garagiste);
-        this.startActivity(navigation);
+    public void onFragmentInteraction(Uri uri) {
+        
+    }
+
+    @Override
+    public void onListFragmentInteraction(Voiture item) {
+
     }
 }

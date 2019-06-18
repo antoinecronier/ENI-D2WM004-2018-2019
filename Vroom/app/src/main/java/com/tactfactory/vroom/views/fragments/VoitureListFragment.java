@@ -2,6 +2,7 @@ package com.tactfactory.vroom.views.fragments;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -10,9 +11,13 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.tactfactory.vroom.R;
+import com.tactfactory.vroom.entities.Garagiste;
 import com.tactfactory.vroom.entities.Voiture;
 import com.tactfactory.vroom.utils.VoitureUtils;
+import com.tactfactory.vroom.views.activities.GaragisteDetailsActivity;
 import com.tactfactory.vroom.views.adapters.VoitureListRecyclerViewAdapter;
+
+import java.util.List;
 
 /**
  * A fragment representing a list of Items.
@@ -23,6 +28,7 @@ import com.tactfactory.vroom.views.adapters.VoitureListRecyclerViewAdapter;
 public class VoitureListFragment extends Fragment {
 
     private OnListFragmentInteractionListener mListener;
+    private List<Voiture> voitures;
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
@@ -46,7 +52,11 @@ public class VoitureListFragment extends Fragment {
             Context context = view.getContext();
             RecyclerView recyclerView = (RecyclerView) view;
             recyclerView.setLayoutManager(new LinearLayoutManager(context));
-            recyclerView.setAdapter(new VoitureListRecyclerViewAdapter(VoitureUtils.generateVoitures(), mListener));
+            if (voitures == null){
+                recyclerView.setAdapter(new VoitureListRecyclerViewAdapter(VoitureUtils.generateVoituresAndGaragisteFullMapped(), mListener));
+            }else{
+                recyclerView.setAdapter(new VoitureListRecyclerViewAdapter(this.voitures, mListener));
+            }
         }
         return view;
     }
@@ -60,6 +70,15 @@ public class VoitureListFragment extends Fragment {
         } else {
             throw new RuntimeException(context.toString()
                     + " must implement OnListFragmentInteractionListener");
+        }
+    }
+
+    @Override
+    public void setArguments(@Nullable Bundle args) {
+        super.setArguments(args);
+        if (args != null && args.getSerializable(GaragisteDetailsFragment.FRAGMENT_ITEM)!=null){
+            Garagiste garagiste = (Garagiste) args.getSerializable(GaragisteDetailsFragment.FRAGMENT_ITEM);
+            this.voitures = garagiste.getVoitures();
         }
     }
 

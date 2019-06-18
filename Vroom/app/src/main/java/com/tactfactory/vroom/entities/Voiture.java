@@ -13,6 +13,7 @@ public class Voiture implements Serializable {
     private String marque;
     private LocalDate dateDeMiseEnCirculation;
     private String nom;
+    private Garagiste garagiste;
 
     public Long getId() {
         return id;
@@ -70,6 +71,14 @@ public class Voiture implements Serializable {
         this.nom = nom;
     }
 
+    public Garagiste getGaragiste() {
+        return garagiste;
+    }
+
+    public void setGaragiste(Garagiste garagiste) {
+        this.garagiste = garagiste;
+    }
+
     public Voiture() {
 
     }
@@ -83,6 +92,16 @@ public class Voiture implements Serializable {
         this.nom = nom;
     }
 
+    public Voiture(Integer nbRoue, String plaque, String couleur, String marque, LocalDate dateDeMiseEnCirculation, String nom, Garagiste garagiste) {
+        this.nbRoue = nbRoue;
+        this.plaque = plaque;
+        this.couleur = couleur;
+        this.marque = marque;
+        this.dateDeMiseEnCirculation = dateDeMiseEnCirculation;
+        this.nom = nom;
+        this.garagiste = garagiste;
+    }
+
     public Voiture(Long id, Integer nbRoue, String plaque, String couleur, String marque, LocalDate dateDeMiseEnCirculation, String nom) {
         this.id = id;
         this.nbRoue = nbRoue;
@@ -91,5 +110,16 @@ public class Voiture implements Serializable {
         this.marque = marque;
         this.dateDeMiseEnCirculation = dateDeMiseEnCirculation;
         this.nom = nom;
+    }
+
+    public Voiture(Long id, Integer nbRoue, String plaque, String couleur, String marque, LocalDate dateDeMiseEnCirculation, String nom, Garagiste garagiste) {
+        this.id = id;
+        this.nbRoue = nbRoue;
+        this.plaque = plaque;
+        this.couleur = couleur;
+        this.marque = marque;
+        this.dateDeMiseEnCirculation = dateDeMiseEnCirculation;
+        this.nom = nom;
+        this.garagiste = garagiste;
     }
 }

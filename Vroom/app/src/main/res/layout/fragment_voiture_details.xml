@@ -41,4 +41,28 @@
     android:layout_margin="@dimen/text_margin"
     android:textAppearance="?attr/textAppearanceListItem" />
 
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/detailsGaragiste"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorAccent"
+        >
+
+        <TextView
+            android:id="@+id/detailsGaragisteNomGarage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:textAppearance="?attr/textAppearanceListItem" />
+
+        <TextView
+            android:id="@+id/detailsGaragisteTelGarage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:textAppearance="?attr/textAppearanceListItem" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
 </LinearLayout>

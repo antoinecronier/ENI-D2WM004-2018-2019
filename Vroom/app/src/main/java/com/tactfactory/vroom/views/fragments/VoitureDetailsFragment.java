@@ -6,12 +6,14 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.tactfactory.vroom.R;
+import com.tactfactory.vroom.entities.Garagiste;
 import com.tactfactory.vroom.entities.Voiture;
 import com.tactfactory.vroom.views.activities.MainActivity;
 import com.tactfactory.vroom.views.activities.VoitureDetailsActivity;
@@ -28,6 +30,9 @@ public class VoitureDetailsFragment extends Fragment {
     private TextView detailsCouleur;
     private TextView detailsNom;
     private TextView detailsDateMiseEnCirculation;
+    private LinearLayoutCompat detailsGaragiste;
+    private TextView detailsGaragisteNomGarage;
+    private TextView detailsGaragisteTelGarage;
 
     public VoitureDetailsFragment() {
         // Required empty public constructor
@@ -49,6 +54,16 @@ public class VoitureDetailsFragment extends Fragment {
         this.detailsCouleur = this.getView().findViewById(R.id.detailsCouleur);
         this.detailsNom = this.getView().findViewById(R.id.detailsNom);
         this.detailsDateMiseEnCirculation = this.getView().findViewById(R.id.detailsDateMiseEnCirculation);
+        this.detailsGaragiste = this.getView().findViewById(R.id.detailsGaragiste);
+        this.detailsGaragisteNomGarage = this.getView().findViewById(R.id.detailsGaragisteNomGarage);
+        this.detailsGaragisteTelGarage = this.getView().findViewById(R.id.detailsGaragisteTelGarage);
+
+        this.detailsGaragiste.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                VoitureDetailsFragment.this.mListener.onFragmentInteraction(VoitureDetailsFragment.this.voiture.getGaragiste());
+            }
+        });
         setupView();
     }
 
@@ -75,6 +90,9 @@ public class VoitureDetailsFragment extends Fragment {
 
             this.detailsNom.setText(this.voiture.getNom());
             this.detailsPlaque.setText(this.voiture.getPlaque());
+
+            this.detailsGaragisteNomGarage.setText(this.voiture.getGaragiste().getGarageName());
+            this.detailsGaragisteTelGarage.setText(this.voiture.getGaragiste().getTelNumber());
         }
     }
 
@@ -104,6 +122,6 @@ public class VoitureDetailsFragment extends Fragment {
      */
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
-        void onFragmentInteraction(Uri uri);
+        void onFragmentInteraction(Garagiste garagiste);
     }
 }
