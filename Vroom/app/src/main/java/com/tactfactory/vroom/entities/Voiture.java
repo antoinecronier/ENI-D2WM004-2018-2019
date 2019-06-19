@@ -1,7 +1,9 @@
 package com.tactfactory.vroom.entities;
 
 import android.arch.persistence.room.ColumnInfo;
+import android.arch.persistence.room.Embedded;
 import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.ForeignKey;
 import android.arch.persistence.room.Ignore;
 import android.arch.persistence.room.PrimaryKey;
 
@@ -12,7 +14,7 @@ import java.time.LocalDate;
 public class Voiture implements Serializable {
 
     @PrimaryKey(autoGenerate = true)
-    @ColumnInfo(name = "id")
+    @ColumnInfo(name = "idVoiture")
     private Long id;
 
     @ColumnInfo(name = "nb_roue")
@@ -20,10 +22,9 @@ public class Voiture implements Serializable {
     private String plaque;
     private String couleur;
     private String marque;
-
-    @Ignore
     private LocalDate dateDeMiseEnCirculation;
     private String nom;
+    private Long garagisteId;
 
     @Ignore
     private Garagiste garagiste;
@@ -84,6 +85,14 @@ public class Voiture implements Serializable {
         this.nom = nom;
     }
 
+    public Long getGaragisteId() {
+        return garagisteId;
+    }
+
+    public void setGaragisteId(Long garagisteId) {
+        this.garagisteId = garagisteId;
+    }
+
     public Garagiste getGaragiste() {
         return garagiste;
     }
@@ -96,6 +105,7 @@ public class Voiture implements Serializable {
 
     }
 
+    @Ignore
     public Voiture(Integer nbRoue, String plaque, String couleur, String marque, LocalDate dateDeMiseEnCirculation, String nom) {
         this.nbRoue = nbRoue;
         this.plaque = plaque;
@@ -105,6 +115,7 @@ public class Voiture implements Serializable {
         this.nom = nom;
     }
 
+    @Ignore
     public Voiture(Integer nbRoue, String plaque, String couleur, String marque, LocalDate dateDeMiseEnCirculation, String nom, Garagiste garagiste) {
         this.nbRoue = nbRoue;
         this.plaque = plaque;
@@ -115,6 +126,7 @@ public class Voiture implements Serializable {
         this.garagiste = garagiste;
     }
 
+    @Ignore
     public Voiture(Long id, Integer nbRoue, String plaque, String couleur, String marque, LocalDate dateDeMiseEnCirculation, String nom) {
         this.id = id;
         this.nbRoue = nbRoue;
@@ -125,6 +137,7 @@ public class Voiture implements Serializable {
         this.nom = nom;
     }
 
+    @Ignore
     public Voiture(Long id, Integer nbRoue, String plaque, String couleur, String marque, LocalDate dateDeMiseEnCirculation, String nom, Garagiste garagiste) {
         this.id = id;
         this.nbRoue = nbRoue;

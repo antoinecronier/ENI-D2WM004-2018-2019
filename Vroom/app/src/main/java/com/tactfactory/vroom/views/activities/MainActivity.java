@@ -1,14 +1,12 @@
 package com.tactfactory.vroom.views.activities;
 
-import android.arch.persistence.room.Room;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.widget.Toast;
 
 import com.tactfactory.vroom.R;
-import com.tactfactory.vroom.database.AppDatabase;
+import com.tactfactory.vroom.database.DatabaseHelper;
+import com.tactfactory.vroom.entities.Garagiste;
 import com.tactfactory.vroom.entities.Voiture;
 import com.tactfactory.vroom.utils.VoitureUtils;
 import com.tactfactory.vroom.views.fragments.VoitureListFragment;
@@ -28,16 +26,16 @@ public class MainActivity extends AppCompatActivity implements VoitureListFragme
         new Thread(new Runnable() {
             @Override
             public void run() {
-                AppDatabase db = Room.databaseBuilder(MainActivity.this,AppDatabase.class,"db1").build();
+//                List<Voiture> voitures = VoitureUtils.generateVoituresAndGaragisteFullMapped();
+//                DatabaseHelper.getInstance().getDatabase().voitureDao().insertEager(voitures);
+//
+//                List<Voiture> voitures1 = DatabaseHelper.getInstance().getDatabase().voitureDao().selectEager();
+//
+//                List<Garagiste> garagistes = DatabaseHelper.getInstance().getDatabase().garagisteDao().selectEager();
+//
+//                DatabaseHelper.getInstance().getDatabase().garagisteDao().insertEager(garagistes.get(0));
 
-                List<Voiture> voitures = VoitureUtils.generateVoitures();
-                db.voitureDao().insert(voitures);
 
-                List<Voiture> voitures1 = db.voitureDao().select();
-
-                for (Voiture voiture: voitures1) {
-                    Log.d(TAG, voiture.getNom());
-                }
             }
         }).start();
 

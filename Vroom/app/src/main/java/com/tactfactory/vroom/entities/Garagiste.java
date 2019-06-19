@@ -1,17 +1,30 @@
 package com.tactfactory.vroom.entities;
 
+import android.arch.persistence.room.ColumnInfo;
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.ForeignKey;
+import android.arch.persistence.room.Ignore;
+import android.arch.persistence.room.PrimaryKey;
+import android.arch.persistence.room.Relation;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity(tableName = "garagiste")
 public class Garagiste implements Serializable {
 
+    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "idGaragiste")
     private Long id;
     private String firstname;
     private String lastname;
     private String address;
     private String garageName;
     private String telNumber;
+
+    //@Relation(parentColumn = "id", entityColumn = "garagisteId", entity = Garagiste.class)
+    @Ignore
     private List<Voiture> voitures;
 
     public Long getId() {
@@ -74,6 +87,7 @@ public class Garagiste implements Serializable {
         this.voitures = new ArrayList<Voiture>();
     }
 
+    @Ignore
     public Garagiste(String firstname, String lastname, String address, String garageName, String telNumber) {
         this();
         this.firstname = firstname;
@@ -83,6 +97,7 @@ public class Garagiste implements Serializable {
         this.telNumber = telNumber;
     }
 
+    @Ignore
     public Garagiste(Long id, String firstname, String lastname, String address, String garageName, String telNumber, List<Voiture> voitures) {
         this.id = id;
         this.firstname = firstname;
