@@ -1,18 +1,31 @@
 package com.tactfactory.vroom.entities;
 
+import android.arch.persistence.room.ColumnInfo;
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.Ignore;
+import android.arch.persistence.room.PrimaryKey;
+
 import java.io.Serializable;
 import java.time.LocalDate;
 
+@Entity(tableName = "voiture")
 public class Voiture implements Serializable {
 
+    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "id")
     private Long id;
 
+    @ColumnInfo(name = "nb_roue")
     private Integer nbRoue;
     private String plaque;
     private String couleur;
     private String marque;
+
+    @Ignore
     private LocalDate dateDeMiseEnCirculation;
     private String nom;
+
+    @Ignore
     private Garagiste garagiste;
 
     public Long getId() {
