@@ -44,7 +44,8 @@ public abstract class VoitureDao {
     public void insertEager(List<Voiture> voitures) {
         for(Voiture voiture: voitures) {
 
-            if (voiture.getGaragisteId() == null){
+            if (voiture.getGaragisteId() == null ||
+                    ( voiture.getGaragiste() != null && voiture.getGaragiste().getId() != null && voiture.getGaragisteId() != voiture.getGaragiste().getId())){
                 if (voiture.getGaragiste() != null){
                     if (voiture.getGaragiste().getId() == null){
                         DatabaseHelper.getInstance().getDatabase().
