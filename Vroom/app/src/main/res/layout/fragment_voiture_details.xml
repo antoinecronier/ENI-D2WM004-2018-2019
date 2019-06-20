@@ -1,68 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".views.fragments.VoitureDetailsFragment">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/detailsNom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
-        android:textAppearance="?attr/textAppearanceListItem" />
-
-    <TextView
-        android:id="@+id/detailsMarque"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
-        android:textAppearance="?attr/textAppearanceListItem" />
-
-<TextView
-    android:id="@+id/detailsPlaque"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_margin="@dimen/text_margin"
-    android:textAppearance="?attr/textAppearanceListItem" />
-
-<TextView
-    android:id="@+id/detailsCouleur"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_margin="@dimen/text_margin"
-    android:textAppearance="?attr/textAppearanceListItem" />
-
-<TextView
-    android:id="@+id/detailsDateMiseEnCirculation"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_margin="@dimen/text_margin"
-    android:textAppearance="?attr/textAppearanceListItem" />
-
-    <android.support.v7.widget.LinearLayoutCompat
-        android:id="@+id/detailsGaragiste"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@color/colorAccent"
-        >
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".views.fragments.VoitureDetailsFragment">
 
-        <TextView
-            android:id="@+id/detailsGaragisteNomGarage"
-            android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/detailsNom"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/text_margin"
             android:textAppearance="?attr/textAppearanceListItem" />
 
-        <TextView
-            android:id="@+id/detailsGaragisteTelGarage"
-            android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/detailsMarque"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/text_margin"
             android:textAppearance="?attr/textAppearanceListItem" />
 
-    </android.support.v7.widget.LinearLayoutCompat>
+        <EditText
+            android:id="@+id/detailsPlaque"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:textAppearance="?attr/textAppearanceListItem" />
 
-</LinearLayout>
+        <EditText
+            android:id="@+id/detailsCouleur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:textAppearance="?attr/textAppearanceListItem" />
+
+        <DatePicker
+            android:id="@+id/detailsDateMiseEnCirculation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:textAppearance="?attr/textAppearanceListItem" />
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

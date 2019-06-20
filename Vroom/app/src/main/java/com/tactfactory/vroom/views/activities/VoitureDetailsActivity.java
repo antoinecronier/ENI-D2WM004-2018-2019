@@ -21,19 +21,22 @@ public class VoitureDetailsActivity extends AppCompatActivity implements Voiture
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_voiture_details);
 
-        Intent navigation = this.getIntent();
-        if (navigation != null && navigation.getSerializableExtra(MainActivity.VOITURE) != null){
-            Voiture voiture = (Voiture) navigation.getSerializableExtra(MainActivity.VOITURE);
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
-            VoitureDetailsFragment fragment = new VoitureDetailsFragment();
+        VoitureDetailsFragment fragment = new VoitureDetailsFragment();
+
+        Intent navigation = this.getIntent();
+        if (navigation != null && navigation.getSerializableExtra(ListVoitureActivity.VOITURE) != null){
+            Voiture voiture = (Voiture) navigation.getSerializableExtra(ListVoitureActivity.VOITURE);
+
             Bundle bundle = new Bundle();
             bundle.putSerializable(FRAGMENT_ITEM,voiture);
             fragment.setArguments(bundle);
-            fragmentTransaction.add(R.id.fragmentDetailsContainer, fragment);
-            fragmentTransaction.commit();
         }
+
+        fragmentTransaction.add(R.id.fragmentDetailsContainer, fragment);
+        fragmentTransaction.commit();
     }
 
     @Override

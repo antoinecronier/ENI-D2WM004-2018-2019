@@ -1,7 +1,6 @@
 package com.tactfactory.vroom.views.fragments;
 
 import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -10,12 +9,13 @@ import android.support.v7.widget.LinearLayoutCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.tactfactory.vroom.R;
 import com.tactfactory.vroom.entities.Garagiste;
 import com.tactfactory.vroom.entities.Voiture;
-import com.tactfactory.vroom.views.activities.MainActivity;
 import com.tactfactory.vroom.views.activities.VoitureDetailsActivity;
 
 import java.time.LocalDate;
@@ -25,14 +25,11 @@ public class VoitureDetailsFragment extends Fragment {
 
     private Voiture voiture;
     private OnFragmentInteractionListener mListener;
-    private TextView detailsPlaque;
-    private TextView detailsMarque;
-    private TextView detailsCouleur;
-    private TextView detailsNom;
-    private TextView detailsDateMiseEnCirculation;
-    private LinearLayoutCompat detailsGaragiste;
-    private TextView detailsGaragisteNomGarage;
-    private TextView detailsGaragisteTelGarage;
+    private EditText detailsPlaque;
+    private EditText detailsMarque;
+    private EditText detailsCouleur;
+    private EditText detailsNom;
+    private DatePicker detailsDateMiseEnCirculation;
 
     public VoitureDetailsFragment() {
         // Required empty public constructor
@@ -54,16 +51,6 @@ public class VoitureDetailsFragment extends Fragment {
         this.detailsCouleur = this.getView().findViewById(R.id.detailsCouleur);
         this.detailsNom = this.getView().findViewById(R.id.detailsNom);
         this.detailsDateMiseEnCirculation = this.getView().findViewById(R.id.detailsDateMiseEnCirculation);
-        this.detailsGaragiste = this.getView().findViewById(R.id.detailsGaragiste);
-        this.detailsGaragisteNomGarage = this.getView().findViewById(R.id.detailsGaragisteNomGarage);
-        this.detailsGaragisteTelGarage = this.getView().findViewById(R.id.detailsGaragisteTelGarage);
-
-        this.detailsGaragiste.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                VoitureDetailsFragment.this.mListener.onFragmentInteraction(VoitureDetailsFragment.this.voiture.getGaragiste());
-            }
-        });
         setupView();
     }
 
@@ -86,13 +73,10 @@ public class VoitureDetailsFragment extends Fragment {
             LocalDate localDate = this.voiture.getDateDeMiseEnCirculation();
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd LLLL yyyy");
 
-            this.detailsDateMiseEnCirculation.setText(formatter.format(localDate));
+            this.detailsDateMiseEnCirculation.updateDate(localDate.getYear(),localDate.getMonthValue(),localDate.getDayOfMonth());
 
             this.detailsNom.setText(this.voiture.getNom());
             this.detailsPlaque.setText(this.voiture.getPlaque());
-
-            this.detailsGaragisteNomGarage.setText(this.voiture.getGaragiste().getGarageName());
-            this.detailsGaragisteTelGarage.setText(this.voiture.getGaragiste().getTelNumber());
         }
     }
 
