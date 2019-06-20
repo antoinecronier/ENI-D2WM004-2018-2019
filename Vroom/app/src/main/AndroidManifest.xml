@@ -11,14 +11,24 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".views.activities.MainActivity">
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+        <activity android:name=".views.activities.VoitureDetailsActivity" />
+        <activity android:name=".views.activities.GaragisteDetailsActivity" />
+        <activity
+            android:name=".views.activities.StartActivity"
+            android:label="@string/title_activity_main2"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".views.activities.VoitureDetailsActivity" />
-        <activity android:name=".views.activities.GaragisteDetailsActivity"></activity>
     </application>
 
 </manifest>
