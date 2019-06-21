@@ -10,6 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.tactfactory.vroom.R;
+import com.tactfactory.vroom.database.DatabaseHelper;
+import com.tactfactory.vroom.database.manager.GaragisteManager;
 import com.tactfactory.vroom.entities.Garagiste;
 import com.tactfactory.vroom.views.adapters.GaragisteListRecyclerViewAdapter;
 import com.tactfactory.vroom.views.asyncworkers.HydrateDatas;
@@ -41,7 +43,7 @@ public class GaragisteListFragment extends Fragment {
             recyclerView.setLayoutManager(new LinearLayoutManager(context));
             GaragisteListRecyclerViewAdapter adapter = new GaragisteListRecyclerViewAdapter(new ArrayList<Garagiste>(), mListener);
             recyclerView.setAdapter(adapter);
-            new HydrateDatas(adapter).execute();
+            new HydrateDatas<Garagiste>(adapter,new GaragisteManager()).execute();
         }
         return view;
     }

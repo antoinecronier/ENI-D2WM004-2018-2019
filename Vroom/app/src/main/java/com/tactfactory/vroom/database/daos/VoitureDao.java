@@ -8,12 +8,13 @@ import android.arch.persistence.room.Query;
 import android.arch.persistence.room.Update;
 
 import com.tactfactory.vroom.database.DatabaseHelper;
+import com.tactfactory.vroom.database.manager.IDaoManager;
 import com.tactfactory.vroom.entities.Voiture;
 
 import java.util.List;
 
 @Dao
-public abstract class VoitureDao {
+public abstract class VoitureDao{
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     protected abstract Long insertInternal(Voiture voiture);

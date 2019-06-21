@@ -45,7 +45,7 @@ public class ListGaragisteActivity extends AppCompatActivity implements Garagist
         int id = item.getItemId();
 
         if (id == R.id.nav_garagiste_crud_new) {
-            Intent navigation = new Intent(this,VoitureDetailsActivity.class);
+            Intent navigation = new Intent(this,GaragisteDetailsActivity.class);
             this.startActivity(navigation);
         }
 

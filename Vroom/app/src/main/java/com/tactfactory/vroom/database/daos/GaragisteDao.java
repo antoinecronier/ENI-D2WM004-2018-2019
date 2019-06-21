@@ -8,6 +8,7 @@ import android.arch.persistence.room.Query;
 import android.arch.persistence.room.Update;
 
 import com.tactfactory.vroom.database.DatabaseHelper;
+import com.tactfactory.vroom.database.manager.IDaoManager;
 import com.tactfactory.vroom.entities.Garagiste;
 import com.tactfactory.vroom.entities.Voiture;
 
@@ -15,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Dao
-public abstract class GaragisteDao {
+public abstract class GaragisteDao{
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     protected abstract Long insertInternal(Garagiste garagiste);

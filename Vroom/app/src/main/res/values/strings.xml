@@ -11,8 +11,9 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
     <string name="voiture_menu">Voiture</string>
-    <string name="garagiste_menu">garagiste</string>
+    <string name="garagiste_menu">Garagiste</string>
     <string name="title_activity_list_voiture">Voiture liste</string>
     <string name="voiture_menu_new">Créer voiture</string>
     <string name="menu_voiture_details_save">save</string>
+    <string name="garagiste_menu_new">Nouveau garagiste</string>
 </resources>

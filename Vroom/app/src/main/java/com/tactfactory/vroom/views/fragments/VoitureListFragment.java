@@ -11,10 +11,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.tactfactory.vroom.R;
+import com.tactfactory.vroom.database.DatabaseHelper;
+import com.tactfactory.vroom.database.manager.VoitureManager;
 import com.tactfactory.vroom.entities.Garagiste;
 import com.tactfactory.vroom.entities.Voiture;
-import com.tactfactory.vroom.utils.VoitureUtils;
-import com.tactfactory.vroom.views.activities.GaragisteDetailsActivity;
 import com.tactfactory.vroom.views.adapters.VoitureListRecyclerViewAdapter;
 import com.tactfactory.vroom.views.asyncworkers.HydrateDatas;
 
@@ -57,7 +57,7 @@ public class VoitureListFragment extends Fragment {
             if (voitures == null){
                 VoitureListRecyclerViewAdapter adapter = new VoitureListRecyclerViewAdapter(new ArrayList<Voiture>(), mListener);
                 recyclerView.setAdapter(adapter);
-                new HydrateDatas(adapter).execute();
+                new HydrateDatas<Voiture>(adapter, new VoitureManager()).execute();
 
             }else{
                 recyclerView.setAdapter(new VoitureListRecyclerViewAdapter(this.voitures, mListener));

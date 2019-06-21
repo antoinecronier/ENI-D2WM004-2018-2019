@@ -1,43 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".views.fragments.GaragisteDetailsFragment">
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".views.fragments.GaragisteDetailsFragment">
 
     <EditText
         android:id="@+id/garagisteDetailsFirstname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/text_margin"
-        android:textAppearance="?attr/textAppearanceListItem"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textAppearance="?attr/textAppearanceListItem"/>
 
     <EditText
         android:id="@+id/garagisteDetailsLastname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/text_margin"
-        android:textAppearance="?attr/textAppearanceListItem"
-        app:layout_constraintTop_toBottomOf="@id/garagisteDetailsFirstname" />
+        android:textAppearance="?attr/textAppearanceListItem"/>
 
     <EditText
         android:id="@+id/garagisteDetailsAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/text_margin"
-        android:textAppearance="?attr/textAppearanceListItem"
-        app:layout_constraintTop_toBottomOf="@id/garagisteDetailsLastname" />
+        android:textAppearance="?attr/textAppearanceListItem"/>
 
     <EditText
         android:id="@+id/garagisteDetailsGarageName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/text_margin"
-        android:textAppearance="?attr/textAppearanceListItem"
-        app:layout_constraintTop_toBottomOf="@id/garagisteDetailsAddress" />
+        android:textAppearance="?attr/textAppearanceListItem"/>
 
     <EditText
         android:id="@+id/garagisteDetailsTelNumber"
@@ -46,7 +45,7 @@
         android:layout_margin="@dimen/text_margin"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:textAppearance="?attr/textAppearanceListItem"
-        app:layout_constraintTop_toBottomOf="@id/garagisteDetailsGarageName" />
+        android:textAppearance="?attr/textAppearanceListItem"/>
 
-</android.support.constraint.ConstraintLayout>
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

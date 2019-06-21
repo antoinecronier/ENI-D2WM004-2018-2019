@@ -6,6 +6,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 
 import com.tactfactory.vroom.R;
 import com.tactfactory.vroom.entities.Garagiste;
@@ -38,9 +40,27 @@ public class GaragisteDetailsActivity extends AppCompatActivity implements Garag
             fragment.setArguments(bundle);
         }
 
-        fragmentTransaction.add(R.id.fragmentDetailsContainer, fragment);
+        fragmentTransaction.add(R.id.fragmentDetailsGaragisteContainer, fragment);
         fragmentTransaction.commit();
         garagisteFragment = fragment;
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        this.getMenuInflater().inflate(R.menu.activity_details_garagiste, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menu_garagiste_details_save:
+                this.garagisteFragment.save();
+                this.startActivity(new Intent(this,ListGaragisteActivity.class));
+                return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     @Override

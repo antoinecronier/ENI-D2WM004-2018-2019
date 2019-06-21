@@ -2,6 +2,7 @@ package com.tactfactory.vroom.views.fragments;
 
 import android.content.Context;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -16,6 +17,7 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.tactfactory.vroom.R;
+import com.tactfactory.vroom.database.DatabaseHelper;
 import com.tactfactory.vroom.entities.Garagiste;
 import com.tactfactory.vroom.entities.Voiture;
 import com.tactfactory.vroom.views.activities.GaragisteDetailsActivity;
@@ -60,7 +62,6 @@ public class GaragisteDetailsFragment extends Fragment  implements EditableView 
         this.detailsTelNumber = this.getView().findViewById(R.id.garagisteDetailsTelNumber);
 
         setupView();
-        setupFragment();
     }
 
     @Override
@@ -84,18 +85,6 @@ public class GaragisteDetailsFragment extends Fragment  implements EditableView 
         }
     }
 
-    private void setupFragment() {
-        FragmentManager fragmentManager = this.getActivity().getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
-        VoitureListFragment fragment = new VoitureListFragment();
-        Bundle bundle = new Bundle();
-        bundle.putSerializable(FRAGMENT_ITEM,garagiste);
-        fragment.setArguments(bundle);
-        fragmentTransaction.add(R.id.fragmentDetailsGaragisteContainer, fragment);
-        fragmentTransaction.commit();
-    }
-
     @Override
     public void setArguments(@Nullable Bundle args) {
         super.setArguments(args);
@@ -112,7 +101,26 @@ public class GaragisteDetailsFragment extends Fragment  implements EditableView 
 
     @Override
     public void save() {
+    new AsyncTask<Garagiste, Void, Void>() {
+        @Override
+        protected Void doInBackground(Garagiste... garagistes) {
+            DatabaseHelper.getInstance().getDatabase().garagisteDao().insertLazy(garagistes[0]);
+            return null;
+        }
+    }.execute(updateGaragiste(this.garagiste));
+}
 
+    private Garagiste updateGaragiste(Garagiste garagiste) {
+        if(garagiste == null){
+            garagiste = new Garagiste();
+        }
+        garagiste.setAddress(this.detailsAddress.getText().toString());
+        garagiste.setFirstname(this.detailsFirstname.getText().toString());
+        garagiste.setGarageName(this.detailsGarageName.getText().toString());
+        garagiste.setLastname(this.detailsLastname.getText().toString());
+        garagiste.setTelNumber(this.detailsTelNumber.getText().toString());
+
+        return garagiste;
     }
 
     /**
