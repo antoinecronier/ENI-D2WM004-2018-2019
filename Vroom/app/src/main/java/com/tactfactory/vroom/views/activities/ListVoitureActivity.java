@@ -1,7 +1,6 @@
 package com.tactfactory.vroom.views.activities;
 
 import android.content.Intent;
-import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -37,23 +36,6 @@ public class ListVoitureActivity extends AppCompatActivity implements VoitureLis
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view_list_voiture);
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.bringToFront();
-
-//        new Thread(new Runnable() {
-//            @Override
-//            public void run() {
-////                List<Voiture> voitures = VoitureUtils.generateVoituresAndGaragisteFullMapped();
-////                DatabaseHelper.getInstance().getDatabase().voitureDao().insertEager(voitures);
-////
-////                List<Voiture> voitures1 = DatabaseHelper.getInstance().getDatabase().voitureDao().selectEager();
-////
-////                List<Garagiste> garagistes = DatabaseHelper.getInstance().getDatabase().garagisteDao().selectEager();
-////
-////                DatabaseHelper.getInstance().getDatabase().garagisteDao().insertEager(garagistes.get(0));
-//
-//
-//            }
-//        }).start();
-
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
@@ -78,7 +60,8 @@ public class ListVoitureActivity extends AppCompatActivity implements VoitureLis
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+            Intent navigation = new Intent(this, StartActivity.class);
+            this.startActivity(navigation);
         }
     }
 

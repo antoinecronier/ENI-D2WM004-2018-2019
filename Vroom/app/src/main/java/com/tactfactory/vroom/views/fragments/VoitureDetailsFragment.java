@@ -1,6 +1,7 @@
 package com.tactfactory.vroom.views.fragments;
 
 import android.content.Context;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -14,14 +15,16 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.tactfactory.vroom.R;
+import com.tactfactory.vroom.database.DatabaseHelper;
 import com.tactfactory.vroom.entities.Garagiste;
 import com.tactfactory.vroom.entities.Voiture;
 import com.tactfactory.vroom.views.activities.VoitureDetailsActivity;
+import com.tactfactory.vroom.views.interfaces.EditableView;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-public class VoitureDetailsFragment extends Fragment {
+public class VoitureDetailsFragment extends Fragment implements EditableView {
 
     private Voiture voiture;
     private OnFragmentInteractionListener mListener;
@@ -92,6 +95,30 @@ public class VoitureDetailsFragment extends Fragment {
     public void onDetach() {
         super.onDetach();
         mListener = null;
+    }
+
+    @Override
+    public void save() {
+        new AsyncTask<Voiture, Void, Void>() {
+            @Override
+            protected Void doInBackground(Voiture... voiture) {
+                DatabaseHelper.getInstance().getDatabase().voitureDao().insertLazy(voiture[0]);
+                return null;
+            }
+        }.execute(updateVoiture(this.voiture));
+    }
+
+    private Voiture updateVoiture(Voiture voiture) {
+        if(voiture == null){
+            voiture = new Voiture();
+        }
+        voiture.setCouleur(this.detailsCouleur.getText().toString());
+        voiture.setMarque(this.detailsMarque.getText().toString());
+        voiture.setDateDeMiseEnCirculation(LocalDate.of(this.detailsDateMiseEnCirculation.getYear(),this.detailsDateMiseEnCirculation.getMonth(),this.detailsDateMiseEnCirculation.getDayOfMonth()));
+        voiture.setNom(this.detailsNom.getText().toString());
+        voiture.setPlaque(this.detailsPlaque.getText().toString());
+
+        return voiture;
     }
 
     /**

@@ -9,12 +9,13 @@ import android.widget.TextView;
 import com.tactfactory.vroom.R;
 import com.tactfactory.vroom.entities.Voiture;
 import com.tactfactory.vroom.views.fragments.VoitureListFragment;
+import com.tactfactory.vroom.views.interfaces.UpdatableItem;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
-public class VoitureListRecyclerViewAdapter extends RecyclerView.Adapter<VoitureListRecyclerViewAdapter.ViewHolder> {
+public class VoitureListRecyclerViewAdapter extends RecyclerView.Adapter<VoitureListRecyclerViewAdapter.ViewHolder> implements UpdatableItem<List<Voiture>> {
 
     private final List<Voiture> mValues;
     private final VoitureListFragment.OnListFragmentInteractionListener mListener;
@@ -59,6 +60,13 @@ public class VoitureListRecyclerViewAdapter extends RecyclerView.Adapter<Voiture
     @Override
     public int getItemCount() {
         return mValues.size();
+    }
+
+    @Override
+    public void update(List<Voiture> items) {
+        this.mValues.clear();
+        this.mValues.addAll(items);
+        this.notifyDataSetChanged();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

@@ -7,7 +7,7 @@
     android:orientation="vertical"
     tools:context=".views.fragments.GaragisteDetailsFragment">
 
-    <TextView
+    <EditText
         android:id="@+id/garagisteDetailsFirstname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,7 +15,7 @@
         android:textAppearance="?attr/textAppearanceListItem"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
+    <EditText
         android:id="@+id/garagisteDetailsLastname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -23,7 +23,7 @@
         android:textAppearance="?attr/textAppearanceListItem"
         app:layout_constraintTop_toBottomOf="@id/garagisteDetailsFirstname" />
 
-    <TextView
+    <EditText
         android:id="@+id/garagisteDetailsAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -31,7 +31,7 @@
         android:textAppearance="?attr/textAppearanceListItem"
         app:layout_constraintTop_toBottomOf="@id/garagisteDetailsLastname" />
 
-    <TextView
+    <EditText
         android:id="@+id/garagisteDetailsGarageName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -39,7 +39,7 @@
         android:textAppearance="?attr/textAppearanceListItem"
         app:layout_constraintTop_toBottomOf="@id/garagisteDetailsAddress" />
 
-    <TextView
+    <EditText
         android:id="@+id/garagisteDetailsTelNumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -48,17 +48,5 @@
         android:layout_marginEnd="8dp"
         android:textAppearance="?attr/textAppearanceListItem"
         app:layout_constraintTop_toBottomOf="@id/garagisteDetailsGarageName" />
-
-        <android.support.v7.widget.ContentFrameLayout
-            android:id="@+id/garagisteDetailsVoituresContainer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            app:layout_constraintTop_toBottomOf="@id/garagisteDetailsTelNumber"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@id/garagisteDetailsTelNumber"></android.support.v7.widget.ContentFrameLayout>
-
 
 </android.support.constraint.ConstraintLayout>
