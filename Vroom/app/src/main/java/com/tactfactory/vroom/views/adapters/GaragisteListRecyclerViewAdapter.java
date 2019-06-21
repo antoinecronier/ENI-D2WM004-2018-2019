@@ -4,9 +4,12 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.tactfactory.vroom.R;
+import com.tactfactory.vroom.database.DatabaseHelper;
 import com.tactfactory.vroom.entities.Garagiste;
 import com.tactfactory.vroom.views.fragments.GaragisteListFragment.OnListFragmentInteractionListener;
 import com.tactfactory.vroom.views.interfaces.UpdatableItem;
@@ -39,7 +42,7 @@ public class GaragisteListRecyclerViewAdapter extends RecyclerView.Adapter<Garag
         holder.itemAddress.setText(mValues.get(position).getAddress());
         holder.itemTelNumber.setText(mValues.get(position).getTelNumber());
 
-        holder.mView.setOnClickListener(new View.OnClickListener() {
+        holder.itemClickable.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (null != mListener) {
@@ -47,6 +50,21 @@ public class GaragisteListRecyclerViewAdapter extends RecyclerView.Adapter<Garag
                     // fragment is attached to one) that an item has been selected.
                     mListener.onListFragmentInteraction(holder.mItem);
                 }
+            }
+        });
+
+        holder.itemDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        DatabaseHelper.getInstance().getDatabase().garagisteDao().delete(holder.mItem);
+                    }
+                }).start();
+
+                GaragisteListRecyclerViewAdapter.this.mValues.remove(holder.mItem);
+                GaragisteListRecyclerViewAdapter.this.notifyDataSetChanged();
             }
         });
     }
@@ -70,6 +88,8 @@ public class GaragisteListRecyclerViewAdapter extends RecyclerView.Adapter<Garag
         public final TextView itemGarageName;
         public final TextView itemAddress;
         public final TextView itemTelNumber;
+        public final LinearLayout itemClickable;
+        public final Button itemDelete;
         public Garagiste mItem;
 
         public ViewHolder(View view) {
@@ -80,6 +100,8 @@ public class GaragisteListRecyclerViewAdapter extends RecyclerView.Adapter<Garag
             itemGarageName = (TextView) view.findViewById(R.id.garagisteGarageName);
             itemAddress = (TextView) view.findViewById(R.id.garagisteAdress);
             itemTelNumber = (TextView) view.findViewById(R.id.garagisteTelNumber);
+            itemDelete = (Button) view.findViewById(R.id.garagiste_item_button);
+            itemClickable = (LinearLayout) view.findViewById(R.id.garagiste_item_clickable);
         }
     }
 }

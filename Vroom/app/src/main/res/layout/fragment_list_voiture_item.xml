@@ -3,6 +3,11 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/voiture_item_clickable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
     <android.support.v7.widget.LinearLayoutCompat
         android:layout_width="match_parent"
@@ -59,4 +64,10 @@
             android:textAppearance="?attr/textAppearanceListItem" />
 
     </android.support.v7.widget.LinearLayoutCompat>
+    </LinearLayout>
+    <Button
+        android:id="@+id/voiture_item_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delete"/>
 </LinearLayout>

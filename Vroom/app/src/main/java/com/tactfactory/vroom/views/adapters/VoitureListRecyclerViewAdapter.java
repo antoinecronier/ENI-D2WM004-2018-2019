@@ -4,9 +4,12 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.tactfactory.vroom.R;
+import com.tactfactory.vroom.database.DatabaseHelper;
 import com.tactfactory.vroom.entities.Voiture;
 import com.tactfactory.vroom.views.fragments.VoitureListFragment;
 import com.tactfactory.vroom.views.interfaces.UpdatableItem;
@@ -45,7 +48,7 @@ public class VoitureListRecyclerViewAdapter extends RecyclerView.Adapter<Voiture
 
         holder.mDateMiseEnCirculationView.setText(localDate.format(formatter));
 
-        holder.mView.setOnClickListener(new View.OnClickListener() {
+        holder.itemClickable.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (null != mListener) {
@@ -53,6 +56,21 @@ public class VoitureListRecyclerViewAdapter extends RecyclerView.Adapter<Voiture
                     // fragment is attached to one) that an item has been selected.
                     mListener.onListFragmentInteraction(holder.mItem);
                 }
+            }
+        });
+
+        holder.itemDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        DatabaseHelper.getInstance().getDatabase().voitureDao().delete(holder.mItem);
+                    }
+                }).start();
+
+                VoitureListRecyclerViewAdapter.this.mValues.remove(holder.mItem);
+                VoitureListRecyclerViewAdapter.this.notifyDataSetChanged();
             }
         });
     }
@@ -76,6 +94,8 @@ public class VoitureListRecyclerViewAdapter extends RecyclerView.Adapter<Voiture
         public final TextView mPlaqueView;
         public final TextView mCouleurView;
         public final TextView mDateMiseEnCirculationView;
+        public final LinearLayout itemClickable;
+        public final Button itemDelete;
         public Voiture mItem;
 
         public ViewHolder(View view) {
@@ -86,6 +106,8 @@ public class VoitureListRecyclerViewAdapter extends RecyclerView.Adapter<Voiture
             mPlaqueView = (TextView) view.findViewById(R.id.plaque);
             mCouleurView = (TextView) view.findViewById(R.id.couleur);
             mDateMiseEnCirculationView = (TextView) view.findViewById(R.id.dateMiseEnCirculation);
+            itemDelete = (Button) view.findViewById(R.id.voiture_item_button);
+            itemClickable = (LinearLayout) view.findViewById(R.id.voiture_item_clickable);
         }
     }
 }
