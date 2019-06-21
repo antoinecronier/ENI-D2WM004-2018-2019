@@ -11,9 +11,4 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
-    <fragment
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:name="com.tactfactory.webposter.views.fragments.CommentListFragment"/>
-
 </android.support.constraint.ConstraintLayout>
