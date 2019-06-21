@@ -12,6 +12,9 @@ import android.view.ViewGroup;
 import com.tactfactory.vroom.R;
 import com.tactfactory.vroom.entities.Garagiste;
 import com.tactfactory.vroom.views.adapters.GaragisteListRecyclerViewAdapter;
+import com.tactfactory.vroom.views.asyncworkers.HydrateDatas;
+
+import java.util.ArrayList;
 
 /**
  * A fragment representing a list of Items.
@@ -36,8 +39,9 @@ public class GaragisteListFragment extends Fragment {
             Context context = view.getContext();
             RecyclerView recyclerView = (RecyclerView) view;
             recyclerView.setLayoutManager(new LinearLayoutManager(context));
-            GaragisteListRecyclerViewAdapter adapter = new GaragisteListRecyclerViewAdapter(DummyContent.ITEMS, mListener);
+            GaragisteListRecyclerViewAdapter adapter = new GaragisteListRecyclerViewAdapter(new ArrayList<Garagiste>(), mListener);
             recyclerView.setAdapter(adapter);
+            new HydrateDatas(adapter).execute();
         }
         return view;
     }

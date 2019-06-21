@@ -50,7 +50,7 @@ public class StartActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_garagiste_crud) {
-            Intent navigation = new Intent(this,ListVoitureActivity.class);
+            Intent navigation = new Intent(this,ListGaragisteActivity.class);
             this.startActivity(navigation);
         } else if (id == R.id.nav_voiture_crud) {
             Intent navigation = new Intent(this,ListVoitureActivity.class);

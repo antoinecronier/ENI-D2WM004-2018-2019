@@ -58,7 +58,9 @@ public class GaragisteListRecyclerViewAdapter extends RecyclerView.Adapter<Garag
 
     @Override
     public void update(List<Garagiste> items) {
-
+        this.mValues.clear();
+        this.mValues.addAll(items);
+        this.notifyDataSetChanged();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

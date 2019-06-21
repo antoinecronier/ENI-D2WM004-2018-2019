@@ -20,11 +20,12 @@ import com.tactfactory.vroom.entities.Garagiste;
 import com.tactfactory.vroom.entities.Voiture;
 import com.tactfactory.vroom.views.activities.GaragisteDetailsActivity;
 import com.tactfactory.vroom.views.activities.VoitureDetailsActivity;
+import com.tactfactory.vroom.views.interfaces.EditableView;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-public class GaragisteDetailsFragment extends Fragment {
+public class GaragisteDetailsFragment extends Fragment  implements EditableView {
     public static final String FRAGMENT_ITEM = "fragmentItem";
 
     private OnFragmentInteractionListener mListener;
@@ -35,7 +36,6 @@ public class GaragisteDetailsFragment extends Fragment {
     private TextView detailsGarageName;
     private TextView detailsAddress;
     private TextView detailsTelNumber;
-    private ContentFrameLayout detailsVoituresContainer;
 
     public GaragisteDetailsFragment() {
         // Required empty public constructor
@@ -58,7 +58,6 @@ public class GaragisteDetailsFragment extends Fragment {
         this.detailsAddress = this.getView().findViewById(R.id.garagisteDetailsAddress);
         this.detailsGarageName = this.getView().findViewById(R.id.garagisteDetailsGarageName);
         this.detailsTelNumber = this.getView().findViewById(R.id.garagisteDetailsTelNumber);
-        this.detailsVoituresContainer = this.getView().findViewById(R.id.garagisteDetailsVoituresContainer);
 
         setupView();
         setupFragment();
@@ -109,6 +108,11 @@ public class GaragisteDetailsFragment extends Fragment {
     public void onDetach() {
         super.onDetach();
         mListener = null;
+    }
+
+    @Override
+    public void save() {
+
     }
 
     /**

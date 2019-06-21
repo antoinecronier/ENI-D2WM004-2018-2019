@@ -14,37 +14,37 @@ import com.tactfactory.vroom.views.fragments.GaragisteDetailsFragment;
 import com.tactfactory.vroom.views.fragments.VoitureDetailsFragment;
 import com.tactfactory.vroom.views.fragments.VoitureListFragment;
 
-public class GaragisteDetailsActivity extends AppCompatActivity implements GaragisteDetailsFragment.OnFragmentInteractionListener, VoitureListFragment.OnListFragmentInteractionListener {
+public class GaragisteDetailsActivity extends AppCompatActivity implements GaragisteDetailsFragment.OnFragmentInteractionListener {
 
     public static final String FRAGMENT_ITEM = "fragmentItem";
+    private GaragisteDetailsFragment garagisteFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_garagistre_details);
 
-        Intent navigation = this.getIntent();
-        if (navigation != null && navigation.getSerializableExtra(VoitureDetailsActivity.GARAGISTE) != null){
-            Garagiste garagiste = (Garagiste) navigation.getSerializableExtra(VoitureDetailsActivity.GARAGISTE);
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
-            GaragisteDetailsFragment fragment = new GaragisteDetailsFragment();
+        GaragisteDetailsFragment fragment = new GaragisteDetailsFragment();
+
+        Intent navigation = this.getIntent();
+        if (navigation != null && navigation.getSerializableExtra(ListGaragisteActivity.GARAGISTE) != null){
+            Garagiste garagiste = (Garagiste) navigation.getSerializableExtra(ListGaragisteActivity.GARAGISTE);
+
             Bundle bundle = new Bundle();
             bundle.putSerializable(FRAGMENT_ITEM,garagiste);
             fragment.setArguments(bundle);
-            fragmentTransaction.add(R.id.fragmentDetailsGaragisteContainer, fragment);
-            fragmentTransaction.commit();
         }
+
+        fragmentTransaction.add(R.id.fragmentDetailsContainer, fragment);
+        fragmentTransaction.commit();
+        garagisteFragment = fragment;
     }
 
     @Override
     public void onFragmentInteraction(Uri uri) {
         
-    }
-
-    @Override
-    public void onListFragmentInteraction(Voiture item) {
-
     }
 }
